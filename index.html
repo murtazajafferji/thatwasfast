@@ -90,6 +90,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 32px;display:fl
 .team .sub{color:var(--muted);font-size:1rem;margin-bottom:48px}
 .team-cards{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:left}
 .t-card{background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:36px}
+.t-card .avatar{width:80px;height:80px;border-radius:50%;object-fit:cover;margin-bottom:16px;border:3px solid var(--border)}
+.t-card .avatar-placeholder{width:80px;height:80px;border-radius:50%;background:linear-gradient(135deg,#3b82f6,#8b5cf6);display:flex;align-items:center;justify-content:center;font-size:1.6rem;font-weight:800;color:white;margin-bottom:16px;border:3px solid var(--border)}
 .t-card .name{font-size:1.2rem;font-weight:800;margin-bottom:4px}
 .t-card .role{font-size:.84rem;color:var(--gold);font-weight:600;margin-bottom:16px}
 .t-card p{font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px}
@@ -199,6 +201,7 @@ footer a{color:var(--gold)}
 <p class="sub">We spent years building AI at the world's biggest tech companies. Now we build it for you.</p>
 <div class="team-cards">
 <div class="t-card">
+<img src="murt.jpg" alt="Murtaza Jafferji" class="avatar">
 <div class="name">Murtaza Jafferji</div>
 <div class="role">Founder</div>
 <p>Started at <strong>Microsoft Consulting Services</strong> deploying enterprise solutions for Fortune 500s. Rose through Microsoft HQ: Principal Software Engineer → Principal Engineering Manager → Data Scientist.</p>
@@ -207,6 +210,7 @@ footer a{color:var(--gold)}
 <a href="https://www.linkedin.com/in/jafferji/" target="_blank">LinkedIn →</a>
 </div>
 <div class="t-card">
+<div class="avatar-placeholder">AJ</div>
 <div class="name">Arwa Jafferji</div>
 <div class="role">Co-Founder</div>
 <p><strong>Team Leader of Software Development at Paycom</strong>. Leads engineering teams building enterprise web applications. Expert in .NET, ASP.NET, and full-stack development.</p>
