@@ -1,0 +1,42 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+
+    - name: Build project
+      run: |
+        mkdir -p build
+        cp index.html style.css build/
+
+    - name: Deploy to GitHub Pages
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: build
+
+  deploy:
+    name: Deploy to Pages
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+
+    steps:
+    - name: Deploy
+      uses: actions/deploy-pages@v2
