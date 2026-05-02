@@ -9,15 +9,19 @@
   <rect width="512" height="512" rx="96" fill="#09090b"/>
   <rect width="512" height="512" rx="96" fill="none" stroke="#a855f7" stroke-width="3" opacity="0.2"/>
   
-  <!-- Checkmark - bold, dynamic angle -->
+  <!-- Checkmark - tip of right edge is at 390,145 -->
   <polyline points="130,270 210,370 390,145" fill="none" stroke="url(#g)" stroke-width="52" stroke-linecap="round" stroke-linejoin="round"/>
   
-  <!-- Speed lines - trailing from the checkmark -->
+  <!-- Speed lines -->
   <rect x="60" y="195" width="80" height="8" rx="4" fill="#a855f7" opacity="0.5"/>
   <rect x="40" y="220" width="100" height="8" rx="4" fill="#a855f7" opacity="0.35"/>
   <rect x="70" y="245" width="65" height="8" rx="4" fill="#a855f7" opacity="0.2"/>
   
-  <!-- Subtle spark/flash at the tip -->
-  <circle cx="390" cy="145" r="12" fill="#c084fc" opacity="0.6"/>
-  <circle cx="390" cy="145" r="6" fill="#fff" opacity="0.4"/>
+  <!-- AI Sparkles - at the right edge tip of check (390, 145) -->
+  <!-- Large sparkle -->
+  <path d="M410,120 L416,145 L441,151 L416,157 L410,182 L404,157 L379,151 L404,145 Z" fill="#fff" opacity="0.9"/>
+  <!-- Medium sparkle -->
+  <path d="M440,95 L443,107 L455,110 L443,113 L440,125 L437,113 L425,110 L437,107 Z" fill="#c084fc" opacity="0.7"/>
+  <!-- Small sparkle -->
+  <path d="M425,150 L427,156 L433,158 L427,160 L425,166 L423,160 L417,158 L423,156 Z" fill="#c084fc" opacity="0.5"/>
 </svg>
