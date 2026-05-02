@@ -63,6 +63,20 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 32px;display:fl
 .demo .sub{color:var(--muted);font-size:1rem;margin-bottom:48px}
 .demo-flow{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap}
 .demo-step{background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:24px;width:280px;text-align:left;position:relative}
+.iphone{max-width:380px;margin:0 auto;border-radius:36px;background:#000;padding:12px;box-shadow:0 40px 80px rgba(0,0,0,.5),inset 0 0 0 3px #2a2a2e}
+.iphone-screen{background:#1c1c1e;border-radius:28px;overflow:hidden}
+.iphone-header{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #2c2c2e}
+.iphone-avatar{width:36px;height:36px;border-radius:50%;object-fit:cover}
+.iphone-contact{font-size:.82rem;font-weight:600;color:#fff}
+.iphone-contact span{display:block;font-size:.68rem;color:#8e8e93;font-weight:400}
+.iphone-body{padding:14px 12px;display:flex;flex-direction:column;gap:6px}
+.imsg{max-width:78%;padding:10px 14px;border-radius:18px;font-size:.84rem;line-height:1.45;word-wrap:break-word}
+.imsg.from-them{align-self:flex-start;background:#2c2c2e;color:#fff;border-bottom-left-radius:4px}
+.imsg.from-me{align-self:flex-end;background:#0b84fe;color:#fff;border-bottom-right-radius:4px}
+.imsg.highlight{align-self:flex-end;background:var(--gold);color:#fff;font-weight:700;font-size:1rem;text-align:center;border-radius:18px;padding:12px 20px}
+.imsg-time{font-size:.65rem;color:#636366;padding:2px 4px}
+.imsg-time.right{align-self:flex-end}
+.imsg-time.left{align-self:flex-start}
 .demo-step .label{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gold);font-weight:700;margin-bottom:12px}
 .demo-step .msg{background:var(--surface2);border-radius:10px;padding:14px;font-size:.84rem;line-height:1.5;color:var(--text)}
 .demo-step .msg.sent{background:#1d4ed8;color:white;border-radius:10px 10px 4px 10px;max-width:220px}
@@ -158,17 +172,24 @@ footer a{color:var(--gold)}
 <div class="demo-inner">
 <h2>How it actually feels.</h2>
 <p class="sub">A real conversation. One thread. One day.</p>
-<div style="max-width:380px;margin:0 auto;background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:24px 18px;display:flex;flex-direction:column;gap:10px">
-<div class="msg sent">I'm so tired of manually replying to order status emails. Every time a customer asks, someone has to look it up and write back. It's eating 2 hours a day. Can you make it just... handle itself?</div>
-<div style="font-size:.68rem;color:var(--muted);text-align:right">10:03 AM</div>
-<div class="msg received">I'm on it! 💪</div>
-<div style="font-size:.68rem;color:var(--muted)">10:07 AM</div>
-<div class="msg received">Done. The solution is tested and live. ✅<br><br>Every order status email now gets an automatic, personalized reply pulled straight from your system.<br><br>Your team will never have to do that manually again. 🙂<br><br>Here's your dashboard so you can watch it work.</div>
-<div style="font-size:.68rem;color:var(--muted)">3:41 PM</div>
-<div class="msg sent">You're kidding. It's already done??</div>
-<div style="font-size:.68rem;color:var(--muted);text-align:right">3:44 PM</div>
-<div class="msg sent" style="background:var(--gold);color:#ffffff;font-weight:700;font-size:1.05rem;text-align:center;border-radius:10px">That was fast!! 🤯</div>
-<div style="font-size:.68rem;color:var(--muted);text-align:right">3:44 PM</div>
+<div class="iphone">
+<div class="iphone-screen">
+<div class="iphone-header">
+<img src="murt.jpg" alt="Murt" class="iphone-avatar">
+<div class="iphone-contact">Murt (AI nerd guy)<span>thatwasfast.ai</span></div>
+</div>
+<div class="iphone-body">
+<div class="imsg-time right">10:03 AM</div>
+<div class="imsg from-me">I’m so tired of manually replying to order status emails. Every time a customer asks, someone has to look it up and write back. It’s eating 2 hours a day. Can you make it just... handle itself?</div>
+<div class="imsg-time left">10:07 AM</div>
+<div class="imsg from-them">I’m on it! 💪</div>
+<div class="imsg-time left">3:41 PM</div>
+<div class="imsg from-them">Done. The solution is tested and live. ✅<br><br>Every order status email now gets an automatic, personalized reply pulled straight from your system.<br><br>Your team will never have to do that manually again. 🙂<br><br>Here’s your dashboard so you can watch it work.</div>
+<div class="imsg-time right">3:44 PM</div>
+<div class="imsg from-me">You’re kidding. It’s already done??</div>
+<div class="imsg highlight">That was fast!! 🤯</div>
+</div>
+</div>
 </div>
 <p style="margin-top:24px;font-size:.84rem;color:var(--muted)">10:03 AM → 3:41 PM. Five hours, not five weeks.</p>
 </div>
