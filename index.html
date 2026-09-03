@@ -109,7 +109,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 16px;display:fl
 .srv h3{font-size:1.1rem;font-weight:700;margin-bottom:8px}
 .srv p{font-size:.9rem;color:var(--muted);line-height:1.5}
 .srv .metric{margin-top:12px;font-size:.82rem;font-weight:700;color:var(--gold)}
-@media(max-width:700px){.srv-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.srv-grid{grid-template-columns:1fr}.featured-offers{grid-template-columns:1fr !important}}
 
 /* TEAM */
 .team{padding:100px 24px;background:var(--surface)}
@@ -166,14 +166,14 @@ section{padding:56px 16px}
 
 <nav>
 <div class="logo">that was <span>fast</span></div>
-<a href="mailto:murt@thatwasfast.ai?subject=I%27m%20ready%20to%20transform%20the%20way%20I%20work%20%F0%9F%92%AA&body=Hey%20Murt%2C%0A%0AI%27m%20interested%20in%20learning%20how%20AI%20can%20help%20my%20business.%20Can%20we%20set%20up%20a%20quick%20call%3F%0A%0AA%20bit%20about%20us%3A%0A-%20Company%3A%20%0A-%20Biggest%20pain%20point%3A%20%0A-%20Best%20time%20to%20chat%3A%20%0A%0AThanks!" class="nav-cta">Book a Call</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
 </nav>
 
 <section class="hero">
 <h1>Does AI scare you?<br><span>We'll change that. Fast.</span></h1>
 <p class="hero-sub">Production-grade software tailored to your business, built by engineers from the tech companies powering the AI revolution. <br><strong style="color:var(--text)">Transform your business. Transform your life.</strong></p>
 <div class="hero-cta-row">
-<a href="mailto:murt@thatwasfast.ai?subject=I%27m%20ready%20to%20transform%20the%20way%20I%20work%20%F0%9F%92%AA&body=Hey%20Murt%2C%0A%0AI%27m%20interested%20in%20learning%20how%20AI%20can%20help%20my%20business.%20Can%20we%20set%20up%20a%20quick%20call%3F%0A%0AA%20bit%20about%20us%3A%0A-%20Company%3A%20%0A-%20Biggest%20pain%20point%3A%20%0A-%20Best%20time%20to%20chat%3A%20%0A%0AThanks!" class="btn-primary">Book a Free Strategy Call</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call</a>
 <a href="#demo" class="btn-ghost">See How We Work Together</a>
 </div>
 </section>
@@ -233,6 +233,20 @@ section{padding:56px 16px}
 
 <section class="services" id="services">
 <div class="services-inner">
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px" class="featured-offers">
+<a href="/lead-response/" style="display:block;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(192,132,252,.05));border:1px solid var(--gold);border-radius:16px;padding:28px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Featured Offer</div>
+<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:6px">AI Lead Response System</h3>
+<p style="font-size:.88rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Reply to every inbound lead in under 5 minutes. Automatically. Built in 5 days.</p>
+<div style="font-size:.85rem;font-weight:700;color:var(--gold)">See the offer →</div>
+</a>
+<a href="/auto-proposal/" style="display:block;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(192,132,252,.05));border:1px solid var(--gold);border-radius:16px;padding:28px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Featured Offer</div>
+<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:6px">Auto-Proposal Generator</h3>
+<p style="font-size:.88rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Every discovery call auto-writes a polished, personalized proposal. Sent before the client hangs up.</p>
+<div style="font-size:.85rem;font-weight:700;color:var(--gold)">See the offer →</div>
+</a>
+</div>
 <h2>"What can you build, fix, upgrade or automate?"<br><span style="color:var(--gold)">Literally anything.</span></h2>
 <p style="text-align:center;color:var(--muted);font-size:1.05rem;max-width:560px;margin:0 auto 48px">Your business has a problem. We solve it. Didn't know that was possible? Think bigger.</p>
 <div class="srv-grid">
@@ -276,7 +290,7 @@ section{padding:56px 16px}
 <section class="final-cta">
 <h2>Ready to buy back<br>your time?</h2>
 <p>The best money you'll ever spend is the kind that buys you hours. We cut the toil. You get your life back. Free strategy call — no commitment.</p>
-<a href="mailto:murt@thatwasfast.ai?subject=I%27m%20ready%20to%20transform%20the%20way%20I%20work%20%F0%9F%92%AA&body=Hey%20Murt%2C%0A%0AI%27m%20interested%20in%20learning%20how%20AI%20can%20help%20my%20business.%20Can%20we%20set%20up%20a%20quick%20call%3F%0A%0AA%20bit%20about%20us%3A%0A-%20Company%3A%20%0A-%20Biggest%20pain%20point%3A%20%0A-%20Best%20time%20to%20chat%3A%20%0A%0AThanks!" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book a Free Call →</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book a Free Call →</a>
 </section>
 
 <footer>
