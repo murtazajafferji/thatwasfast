@@ -178,10 +178,12 @@ section{padding:56px 16px}
 <div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30.</div>
 <script>
 window.TWF_SPOTS_LEFT = 5;
+window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 (function(){
   var n = window.TWF_SPOTS_LEFT;
   var el = document.getElementById('spots-left');
   if (!el) return;
+  if (new Date() >= window.TWF_PROMO_END) { el.parentElement.style.display='none'; return; }
   if (n <= 0) { el.parentElement.style.display='none'; return; }
   el.textContent = 'Only ' + n + (n === 1 ? ' spot' : ' spots') + ' left';
   if (n <= 2) el.style.color = '#fef08a';
@@ -227,7 +229,7 @@ window.TWF_SPOTS_LEFT = 5;
 <div style="border-bottom:1px solid #e5e5e5;padding-bottom:12px;margin-bottom:16px"><div style="font-size:.7rem;font-weight:700;color:#666;letter-spacing:.1em">PROPOSAL · #2026-0034</div><div style="font-size:1.15rem;font-weight:800;color:#000;margin-top:4px">AI Editing Pipeline<br><span style="color:#666;font-weight:500;font-size:.9rem">for Bella Vista Photography</span></div></div>
 <div style="font-size:.78rem;color:#333;line-height:1.6"><strong>Executive summary</strong><br>Cut post-wedding delivery from 4 weeks to 5 days using an AI-assisted culling + editing pipeline tuned to your style. Frees ~60 hrs/wedding for shooting or personal time.</div>
 <div style="margin-top:16px;padding:12px;background:#f5f5f7;border-radius:8px"><div style="font-size:.7rem;font-weight:700;color:#666;margin-bottom:6px">DELIVERABLES</div><div style="font-size:.78rem;color:#333;line-height:1.7">✓ Style-matched AI culling (Lightroom plugin)<br>✓ Auto-color grading in your signature look<br>✓ Client gallery delivery automation<br>✓ 5-day build · Live by Sept 15</div></div>
-<div style="margin-top:16px;display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:2px solid #000"><div><div style="font-size:.68rem;color:#666;font-weight:700">TOTAL</div><div style="font-size:1.4rem;font-weight:900;color:#000">$4,997<span style="font-size:.75rem;color:#666;font-weight:500"> + $597/mo</span></div></div><div style="background:#000;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:.85rem">Sign here →</div></div>
+<div style="margin-top:16px;display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:2px solid #000"><div><div style="font-size:.68rem;color:#666;font-weight:700">TOTAL</div><div style="font-size:1.4rem;font-weight:900;color:#000">$12,500<span style="font-size:.75rem;color:#666;font-weight:500"> · 4-week build</span></div></div><div style="background:#000;color:#fff;padding:10px 20px;border-radius:8px;font-weight:700;font-size:.85rem">Sign here →</div></div>
 </div>
 </div>
 <p style="text-align:center;color:var(--muted);font-size:.85rem;margin-top:32px">Same-day proposals close <strong style="color:var(--text)">3-4× more often</strong> than 3-day proposals. This one landed while the coffee was still warm.</p>

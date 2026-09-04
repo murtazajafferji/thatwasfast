@@ -178,10 +178,12 @@ section{padding:56px 16px}
 <div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30.</div>
 <script>
 window.TWF_SPOTS_LEFT = 5;
+window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 (function(){
   var n = window.TWF_SPOTS_LEFT;
   var el = document.getElementById('spots-left');
   if (!el) return;
+  if (new Date() >= window.TWF_PROMO_END) { el.parentElement.style.display='none'; return; }
   if (n <= 0) { el.parentElement.style.display='none'; return; }
   el.textContent = 'Only ' + n + (n === 1 ? ' spot' : ' spots') + ' left';
   if (n <= 2) el.style.color = '#fef08a';
