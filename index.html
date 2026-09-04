@@ -27,6 +27,19 @@ fbq('init','1116154840839854');
 fbq('track','PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1116154840839854&ev=PageView&noscript=1"/></noscript>
+<!-- CAPI helper (dedup with pixel via event_id) -->
+<script>
+window.TWF_CAPI='https://thatwasfast-capi.murtazajafferji.workers.dev';
+window.twfCapiSend=function(name,data){
+  var id=(crypto.randomUUID?crypto.randomUUID():Date.now()+'-'+Math.random().toString(36).slice(2));
+  try{
+    var m=document.cookie.match(/_fbc=([^;]+)/); var fbc=m?m[1]:null;
+    var p=document.cookie.match(/_fbp=([^;]+)/); var fbp=p?p[1]:null;
+    if(window.fbq)fbq('track',name,data||{},{eventID:id});
+    fetch(window.TWF_CAPI,{method:'POST',headers:{'Content-Type':'application/json'},keepalive:true,body:JSON.stringify({event_name:name,event_id:id,event_source_url:location.href,custom_data:data||{},user_data:{fbc:fbc,fbp:fbp}})}).catch(function(){});
+  }catch(e){}
+};
+</script>
 <!-- Google Analytics + Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YH6KCPB6RQ"></script>
 <script>
@@ -41,13 +54,13 @@ document.addEventListener('DOMContentLoaded',function(){
       var loc=a.closest('nav')?'nav':(a.closest('.final-cta')?'final':'hero');
       gtag('event','book_call_click',{page:'home',cta_location:loc});
       gtag('event','conversion',{send_to:'AW-18429599857/LSiECJ2E_O0cEPHA9dNE',value:500,currency:'USD'});
-      if(window.fbq)fbq('track','Lead',{content_name:'Book a Call',content_category:'home',source:loc});
+      if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',source:loc,value:500,currency:'USD'});
     });
   });
   document.querySelectorAll('a[href^="/lead-response/"],a[href^="/auto-proposal/"],a[href^="/voice-receptionist/"]').forEach(function(a){
     a.addEventListener('click',function(){
       gtag('event','offer_click',{offer:a.getAttribute('href').replace(/\//g,'')});
-      if(window.fbq)fbq('track','ViewContent',{content_name:a.getAttribute('href').replace(/\//g,''),content_category:'offer-card'});
+      if(window.twfCapiSend)twfCapiSend('ViewContent',{content_name:a.getAttribute('href').replace(/\//g,''),content_category:'offer-card'});
     });
   });
 });

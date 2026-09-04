@@ -1,0 +1,11 @@
+name = "thatwasfast-capi"
+main = "src/worker.js"
+compatibility_date = "2025-01-01"
+
+[vars]
+# Public / non-secret vars go here. Access token is a secret (wrangler secret put).
+
+# Uncomment after wiring DNS on your CF zone
+# routes = [
+#   { pattern = "capi.thatwasfast.ai/*", zone_name = "thatwasfast.ai" }
+# ]
