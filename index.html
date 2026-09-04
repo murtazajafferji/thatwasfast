@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded',function(){
       gtag('event','book_call_click',{page:'home',cta_location:a.closest('nav')?'nav':(a.closest('.final-cta')?'final':'hero')});
     });
   });
-  document.querySelectorAll('a[href^="/lead-response/"],a[href^="/auto-proposal/"]').forEach(function(a){
+  document.querySelectorAll('a[href^="/lead-response/"],a[href^="/auto-proposal/"],a[href^="/voice-receptionist/"]').forEach(function(a){
     a.addEventListener('click',function(){
       gtag('event','offer_click',{offer:a.getAttribute('href').replace(/\//g,'')});
     });
@@ -253,17 +253,23 @@ section{padding:56px 16px}
 
 <section class="services" id="services">
 <div class="services-inner">
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-bottom:48px" class="featured-offers">
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:48px" class="featured-offers">
 <a href="/lead-response/" style="display:block;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(192,132,252,.05));border:1px solid var(--gold);border-radius:16px;padding:28px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
 <div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Featured Offer</div>
-<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:6px">AI Lead Response System</h3>
-<p style="font-size:.88rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Reply to every inbound lead in under 5 minutes. Automatically. Built in 5 days.</p>
+<h3 style="font-size:1.15rem;font-weight:800;margin-bottom:6px">AI Lead Response System</h3>
+<p style="font-size:.85rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Reply to every inbound lead in under 5 minutes. Automatically. Built in 5 days.</p>
+<div style="font-size:.85rem;font-weight:700;color:var(--gold)">See the offer →</div>
+</a>
+<a href="/voice-receptionist/" style="display:block;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(192,132,252,.05));border:1px solid var(--gold);border-radius:16px;padding:28px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Featured Offer</div>
+<h3 style="font-size:1.15rem;font-weight:800;margin-bottom:6px">AI Voice Receptionist</h3>
+<p style="font-size:.85rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Answers every call in your voice. Books appointments. 24/7. Never misses.</p>
 <div style="font-size:.85rem;font-weight:700;color:var(--gold)">See the offer →</div>
 </a>
 <a href="/auto-proposal/" style="display:block;background:linear-gradient(135deg,rgba(168,85,247,.15),rgba(192,132,252,.05));border:1px solid var(--gold);border-radius:16px;padding:28px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
 <div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Featured Offer</div>
-<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:6px">Auto-Proposal Generator</h3>
-<p style="font-size:.88rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Every discovery call auto-writes a polished, personalized proposal. Sent before the client hangs up.</p>
+<h3 style="font-size:1.15rem;font-weight:800;margin-bottom:6px">Auto-Proposal Generator</h3>
+<p style="font-size:.85rem;color:var(--muted);line-height:1.5;margin-bottom:14px">Every discovery call auto-writes a personalized proposal. Sent before the client hangs up.</p>
 <div style="font-size:.85rem;font-weight:700;color:var(--gold)">See the offer →</div>
 </a>
 </div>
@@ -298,7 +304,7 @@ section{padding:56px 16px}
 <img src="jeremy.jpg" alt="Jeremy Waller" class="avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
 <div class="avatar-placeholder" style="display:none">JW</div>
 <div class="name">Jeremy Waller</div>
-<div class="role">Partner, Client Success</div>
+<div class="role">Founder</div>
 <p><strong>12+ years transforming teams and cultures.</strong> Executive coach, facilitator, and leadership developer who's spent his career turning company values into tangible action — and helping people feel <em>empowered, known, seen, and valued</em> in the process.</p>
 <p>At That Was Fast, Jeremy owns the human side: discovery calls, onboarding, and making sure every engagement actually lands with your team. He pinpoints what you need, cuts through complexity, and gets it done properly.</p>
 <p style="color:var(--text);font-size:.86rem"><em>"AI is the leverage. But people are the point. My job is to make sure both win."</em></p>
