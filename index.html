@@ -74,14 +74,14 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--t
 a{color:inherit;text-decoration:none}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 16px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,9,11,.8);backdrop-filter:blur(20px)}
+nav{position:sticky;top:0;left:0;right:0;z-index:100;padding:16px 16px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,9,11,.8);backdrop-filter:blur(20px)}
 .logo{font-weight:900;font-size:1rem;letter-spacing:-.02em;white-space:nowrap}
 .logo span{color:var(--gold)}
 .nav-cta{padding:8px 16px;background:var(--gold);color:var(--white);font-weight:700;font-size:.82rem;border-radius:8px;transition:transform .15s;white-space:nowrap}
 .nav-cta:hover{transform:scale(1.04)}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative}
+.hero{min-height:calc(100vh - 100px);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:80px 24px 80px;position:relative}
 .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:100%;max-width:800px;height:800px;background:radial-gradient(circle,rgba(168,85,247,.06) 0%,transparent 70%);pointer-events:none}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;padding:8px 16px;background:var(--surface);border:1px solid var(--border);border-radius:999px;font-size:.8rem;color:var(--muted);margin-bottom:32px}
 .hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);animation:pulse 2s infinite}
@@ -210,6 +210,8 @@ section{padding:56px 16px}
 </head>
 <body>
 
+<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER FOUNDING CLIENT SPECIAL</strong> — 40% off every offer. Book by Sept 30. <a href="https://cal.com/thatwasfast/30min" style="color:#fff;text-decoration:underline;font-weight:700" target="_blank" rel="noopener">Claim your spot →</a></div>
+
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>
 <div style="display:flex;gap:8px;align-items:center">
@@ -278,14 +280,14 @@ section{padding:56px 16px}
 
 <section class="promise">
 <div class="promise-inner">
-<h2>We empower your team.<br>We never replace them.</h2>
-<p>We don't work with companies trying to cut headcount. We work with companies trying to <strong>grow</strong>. Every system we build hands the busywork to AI so your people can do the work that actually moves the needle.</p>
+<h2>Every system pays for itself<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">in month one.</span></h2>
+<p>These aren't tools you have to figure out how to justify. Each system is designed around ONE number: <strong>the extra revenue it generates in the first 30 days</strong>. Miss the number, get your money back. Simple.</p>
 </div>
 <div class="promise-cards">
-<div class="p-card"><div class="icon">&#128241;</div><h4>Fixed price, fixed timeline</h4><p>Productized offers with clear pricing. Live in 5 business days. No hourly billing, no scope creep, no surprises.</p></div>
-<div class="p-card"><div class="icon">&#128736;</div><h4>Production-grade, not a toy</h4><p>Full system built on the same stack Fortune 500s use. Not a ChatGPT wrapper. Not a no-code hack.</p></div>
-<div class="p-card"><div class="icon">&#128274;</div><h4>You own everything</h4><p>Your data, your API keys, your accounts. Cancel anytime after month 3, keep the whole system.</p></div>
-<div class="p-card"><div class="icon">&#128176;</div><h4>30-day money back</h4><p>If it doesn't deliver measurable results in month 1, we refund the setup fee. Skin in the game.</p></div>
+<div class="p-card"><div class="icon">&#128222;</div><h4>Voice Receptionist</h4><p style="margin-bottom:8px"><strong style="color:var(--text)">Pays for itself if it books 2 extra jobs/mo.</strong></p><p style="font-size:.8rem">Most service businesses miss 30% of calls. This catches all of them. Typical: 5-10 extra bookings/mo = $2,500-$5,000 new revenue.</p></div>
+<div class="p-card"><div class="icon">&#9889;</div><h4>Lead Response</h4><p style="margin-bottom:8px"><strong style="color:var(--text)">Pays for itself with 1 extra lead/mo.</strong></p><p style="font-size:.8rem">21× more likely to convert if you reply in 5 min vs 30 min. Typical: +7 closes/mo on a 50-lead pipeline = $3,500+ new revenue.</p></div>
+<div class="p-card"><div class="icon">&#128221;</div><h4>Auto-Proposal Writer</h4><p style="margin-bottom:8px"><strong style="color:var(--text)">Pays for itself in one closed deal.</strong></p><p style="font-size:.8rem">Same-day proposals close 3-4× more than 3-day ones. One extra win = 5-10× your setup fee back.</p></div>
+<div class="p-card"><div class="icon">&#128176;</div><h4>30-day guarantee</h4><p style="margin-bottom:8px"><strong style="color:var(--text)">If it doesn't deliver, you don't pay.</strong></p><p style="font-size:.8rem">No measurable results in month 1? We refund the setup fee. Skin in the game. That's how confident we are.</p></div>
 </div>
 </section>
 
