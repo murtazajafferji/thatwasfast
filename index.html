@@ -210,7 +210,19 @@ section{padding:56px 16px}
 </head>
 <body>
 
-<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER FOUNDING CLIENT SPECIAL</strong> — 40% off every offer. Book by Sept 30. <a href="https://cal.com/thatwasfast/30min" style="color:#fff;text-decoration:underline;font-weight:700" target="_blank" rel="noopener">Claim your spot →</a></div>
+<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER LAUNCH SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30. <a href="https://cal.com/thatwasfast/30min" style="color:#fff;text-decoration:underline;font-weight:700" target="_blank" rel="noopener">Claim your spot →</a></div>
+<script>
+// SPOTS_LEFT: single source of truth — edit this number as bookings come in
+window.TWF_SPOTS_LEFT = 5;
+(function(){
+  var n = window.TWF_SPOTS_LEFT;
+  var el = document.getElementById('spots-left');
+  if (!el) return;
+  if (n <= 0) { el.parentElement.style.display='none'; return; }
+  el.textContent = 'Only ' + n + (n === 1 ? ' spot' : ' spots') + ' left';
+  if (n <= 2) el.style.color = '#fef08a'; // yellow when critically low
+})();
+</script>
 
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>

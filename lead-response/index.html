@@ -175,7 +175,18 @@ section{padding:56px 16px}
 </head>
 <body>
 
-<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER FOUNDING CLIENT SPECIAL</strong> — 40% off every offer. Book by Sept 30.</div>
+<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER LAUNCH SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30.</div>
+<script>
+window.TWF_SPOTS_LEFT = 5;
+(function(){
+  var n = window.TWF_SPOTS_LEFT;
+  var el = document.getElementById('spots-left');
+  if (!el) return;
+  if (n <= 0) { el.parentElement.style.display='none'; return; }
+  el.textContent = 'Only ' + n + (n === 1 ? ' spot' : ' spots') + ' left';
+  if (n <= 2) el.style.color = '#fef08a';
+})();
+</script>
 
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>
@@ -269,7 +280,7 @@ section{padding:56px 16px}
 <h2 class="section-title">One-time build. Ongoing wins.</h2>
 <p class="section-sub">No hourly billing. No mystery invoices. You know exactly what it costs before we start.</p>
 <div class="price-card">
-<div class="price-tag" style="background:#22c55e">🎯 SEPTEMBER FOUNDING CLIENT · 40% OFF</div>
+<div class="price-tag" style="background:#22c55e">🎯 SEPTEMBER SPECIAL · 40% OFF</div>
 <div class="price-name">AI Lead Response System</div>
 <div style="font-size:1.4rem;color:var(--muted);text-decoration:line-through;text-decoration-color:var(--red);margin-bottom:8px">$4,997 setup + $997/mo</div>
 <div class="price-amount">$2,997</div>
