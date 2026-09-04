@@ -19,6 +19,13 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init','1116154840839854');
+fbq('track','PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1116154840839854&ev=PageView&noscript=1"/></noscript>
 <!-- Google Analytics + Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YH6KCPB6RQ"></script>
 <script>
@@ -33,11 +40,13 @@ document.addEventListener('DOMContentLoaded',function(){
       var loc=a.closest('nav')?'nav':(a.closest('.final-cta')?'final':'hero');
       gtag('event','book_call_click',{page:'home',cta_location:loc});
       gtag('event','conversion',{send_to:'AW-18429599857/LSiECJ2E_O0cEPHA9dNE',value:500,currency:'USD'});
+      if(window.fbq)fbq('track','Lead',{content_name:'Book a Call',content_category:'home',source:loc});
     });
   });
   document.querySelectorAll('a[href^="/lead-response/"],a[href^="/auto-proposal/"],a[href^="/voice-receptionist/"]').forEach(function(a){
     a.addEventListener('click',function(){
       gtag('event','offer_click',{offer:a.getAttribute('href').replace(/\//g,'')});
+      if(window.fbq)fbq('track','ViewContent',{content_name:a.getAttribute('href').replace(/\//g,''),content_category:'offer-card'});
     });
   });
 });
