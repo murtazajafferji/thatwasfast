@@ -19,6 +19,26 @@
 <link rel="apple-touch-icon" href="icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-YH6KCPB6RQ"></script>
+<script>
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments)}
+gtag('js',new Date());
+gtag('config','G-YH6KCPB6RQ',{page_title:'Home',page_path:'/'});
+document.addEventListener('DOMContentLoaded',function(){
+  document.querySelectorAll('a[href*="cal.com/thatwasfast"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      gtag('event','book_call_click',{page:'home',cta_location:a.closest('nav')?'nav':(a.closest('.final-cta')?'final':'hero')});
+    });
+  });
+  document.querySelectorAll('a[href^="/lead-response/"],a[href^="/auto-proposal/"]').forEach(function(a){
+    a.addEventListener('click',function(){
+      gtag('event','offer_click',{offer:a.getAttribute('href').replace(/\//g,'')});
+    });
+  });
+});
+</script>
 <style>
 :root{--bg:#09090b;--surface:#18181b;--surface2:#27272a;--border:#3f3f46;--text:#fafafa;--muted:#a1a1aa;--gold:#a855f7;--gold2:#c084fc;--white:#fff;--max:1100px}
 *{box-sizing:border-box;margin:0;padding:0}
