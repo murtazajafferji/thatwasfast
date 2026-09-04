@@ -10,14 +10,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thatwasfast.ai/auto-proposal/">
 <meta property="og:image" content="https://thatwasfast.ai/og-image.png">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Auto-Proposal Generator — That Was Fast">
 <meta name="twitter:description" content="Every discovery call auto-generates a personalized proposal. Instantly.">
 <meta name="twitter:image" content="https://thatwasfast.ai/og-image.png">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Meta Pixel -->
 <script>
@@ -172,6 +172,41 @@ section{padding:56px 16px}
 .price-amount{font-size:2.4rem}
 }
 </style>
+<link rel="canonical" href="https://thatwasfast.ai/auto-proposal/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"Auto-Proposal Generator","description":"Generate polished custom proposals from your discovery calls in minutes. Same-day proposals close 3-4x more.","provider":{"@type":"Organization","name":"That Was Fast","url":"https://thatwasfast.ai/"},"areaServed":"US","offers":{"@type":"Offer","priceCurrency":"USD","price":"2997","description":"$2,997 setup + $597/mo flat retainer (covers all systems added)"}}
+</script>
+<script>
+(function(){
+  var page = location.pathname.replace(/\/$/,'').split('/').pop() || 'home';
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="cal.com/thatwasfast"]');
+    if (!a) return;
+    if (a.dataset.twfTracked) return;
+    a.dataset.twfTracked = '1';
+    var event = (new URL(a.href).searchParams.get('event')) || page;
+    try{
+      if (window.gtag) gtag('event', 'book_call_click', {page: page, source: 'auto', event_type: event});
+      if (window.gtag) gtag('event', 'generate_lead', {offer: event, source: 'auto'});
+      if (window.twfCapiSend) twfCapiSend('Lead', {content_name: 'Book a Call', content_category: event, value: 500, currency: 'USD'});
+      if (window.fbq) fbq('track', 'Lead', {content_name: 'Book a Call', content_category: event, value: 500, currency: 'USD'});
+    } catch(err){}
+    setTimeout(function(){ delete a.dataset.twfTracked; }, 3000);
+  }, true);
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="tel:+1425"]');
+    if (!a) return;
+    if (a.dataset.twfCalltracked) return;
+    a.dataset.twfCalltracked = '1';
+    try{
+      if (window.gtag) gtag('event', 'demo_call', {page: page, source: 'auto'});
+      if (window.twfCapiSend) twfCapiSend('Contact', {content_name: 'Demo Call', content_category: page});
+      if (window.fbq) fbq('track', 'Contact', {content_name: 'Demo Call'});
+    } catch(err){}
+    setTimeout(function(){ delete a.dataset.twfCalltracked; }, 3000);
+  }, true);
+})();
+</script>
 </head>
 <body>
 
@@ -192,18 +227,23 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>
-<a href="https://cal.com/thatwasfast/30min?event=auto-proposal" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+<div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+<a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Voice</a>
+<a href="/lead-response/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Lead Response</a>
+<a href="/auto-proposal/" style="padding:6px 10px;font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600">Proposals</a>
+<a href="https://cal.com/thatwasfast/30min?event=auto-proposal" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'auto-proposal',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'auto-proposal',value:500,currency:'USD'});" class="nav-cta">Book Call</a>
+</div>
 </nav>
 
 <section class="hero">
-<div class="eyebrow"><span class="dot"></span>NEW OFFER · FOR CONSULTANTS & AGENCIES</div>
-<h1>Every discovery call.<br>Every proposal.<br><span>Written before the client hangs up.</span></h1>
+<div class="eyebrow"><span class="dot"></span>FOR CONSULTANTS · AGENCIES · FREELANCERS</div>
+<h1>Discovery call ends at 2:00.<br>Proposal lands at 2:04.<br><span>Same-day deals close 3-4× more.</span></h1>
 <p class="hero-sub">You take the call. Our AI listens, understands, and delivers a polished, personalized proposal to your client's inbox — <strong>before you've even finished your coffee</strong>. You close more, you write less. Built in 5 days.</p>
 <div class="hero-cta-row">
 <a href="https://cal.com/thatwasfast/30min?event=auto-proposal" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call →</a>
 <a href="#how" class="btn-ghost">See How It Works</a>
 </div>
-<p class="hero-note">$3,500 one-time setup · $500/mo · Cancel anytime</p>
+<p class="hero-note">$2,997 setup · $597/mo flat (covers all systems) · 5-day delivery · 30-day guarantee</p>
 </section>
 
 <section style="padding:80px 24px;background:var(--surface)">

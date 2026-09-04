@@ -12,13 +12,13 @@
 <meta property="og:url" content="https://thatwasfast.ai">
 <meta property="og:image" content="https://thatwasfast.ai/logo-full.png">
 <meta name="twitter:image" content="https://thatwasfast.ai/logo-full.png">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="That Was Fast — AI systems that book more work, on autopilot">
 <meta name="twitter:description" content="Call our live demo: (425) 437-8836. Then book a call to build one for your business.">
 <link rel="icon" href="favicon.ico" type="image/x-icon">
 <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Meta Pixel -->
 <script>
@@ -207,6 +207,77 @@ section{padding:56px 16px}
 .t-card{padding:24px}
 }
 </style>
+<link rel="canonical" href="https://thatwasfast.ai/">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://thatwasfast.ai/#org",
+      "name": "That Was Fast",
+      "url": "https://thatwasfast.ai/",
+      "logo": "https://thatwasfast.ai/logo-full.png",
+      "telephone": "+1-425-437-8836",
+      "description": "AI systems that answer calls, respond to leads, and write proposals for service businesses. Live in 5 days.",
+      "founder": [
+        {"@type":"Person","name":"Taza"},
+        {"@type":"Person","name":"Jeremy"}
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "url": "https://thatwasfast.ai/",
+      "name": "That Was Fast",
+      "publisher": {"@id":"https://thatwasfast.ai/#org"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"What if AI doesn't work for my industry?","acceptedAnswer":{"@type":"Answer","text":"Our systems are built on the same tech that powers ChatGPT and the biggest AI voice platforms. If your business takes calls, replies to leads, or writes proposals, it works. We've built for HVAC, dental, plumbing, salons, med spas, law firms, and consulting."}},
+        {"@type":"Question","name":"Do I need to know anything about AI?","acceptedAnswer":{"@type":"Answer","text":"Zero. We handle every technical piece — model selection, prompts, integrations, deployment, monitoring. You get a working system that ships in 5 business days."}},
+        {"@type":"Question","name":"How is this different from Smith.ai or Ruby?","acceptedAnswer":{"@type":"Answer","text":"Smith.ai and Ruby charge $300-$2,100/mo for bundled minutes and route through their system. We build a custom AI on your phone number — flat $597/mo, no per-minute overage, no shared infrastructure. You own the system."}},
+        {"@type":"Question","name":"Can I bundle multiple systems?","acceptedAnswer":{"@type":"Answer","text":"Yes. Setup fee is per system built ($2,997 in September). The monthly retainer is flat at $597/mo total, no matter how many systems we build for you."}},
+        {"@type":"Question","name":"What if I want a refund?","acceptedAnswer":{"@type":"Answer","text":"If you're not seeing measurable results in the first 30 days, we refund the setup fee. No hoops, no fine print."}}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- Auto-attach conversion tracking to every Cal.com link on every page -->
+<script>
+(function(){
+  var page = location.pathname.replace(/\/$/,'').split('/').pop() || 'home';
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="cal.com/thatwasfast"]');
+    if (!a) return;
+    if (a.dataset.twfTracked) return; // prevent double-fire in same session
+    a.dataset.twfTracked = '1';
+    var event = (new URL(a.href).searchParams.get('event')) || page;
+    try{
+      if (window.gtag) gtag('event', 'book_call_click', {page: page, source: 'auto', event_type: event});
+      if (window.gtag) gtag('event', 'generate_lead', {offer: event, source: 'auto'});
+      if (window.twfCapiSend) twfCapiSend('Lead', {content_name: 'Book a Call', content_category: event, value: 500, currency: 'USD'});
+      if (window.fbq) fbq('track', 'Lead', {content_name: 'Book a Call', content_category: event, value: 500, currency: 'USD'});
+    } catch(err){}
+    setTimeout(function(){ delete a.dataset.twfTracked; }, 3000);
+  }, true);
+  // Same idea for tel: links
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="tel:+1425"]');
+    if (!a) return;
+    if (a.dataset.twfCalltracked) return;
+    a.dataset.twfCalltracked = '1';
+    try{
+      if (window.gtag) gtag('event', 'demo_call', {page: page, source: 'auto'});
+      if (window.twfCapiSend) twfCapiSend('Contact', {content_name: 'Demo Call', content_category: page});
+      if (window.fbq) fbq('track', 'Contact', {content_name: 'Demo Call'});
+    } catch(err){}
+    setTimeout(function(){ delete a.dataset.twfCalltracked; }, 3000);
+  }, true);
+})();
+</script>
 </head>
 <body>
 
@@ -239,13 +310,12 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <section class="hero">
 <h1>Where does your business<br>even start with AI?<br><a href="#services" style="text-decoration:none" onclick="if(window.gtag)gtag('event','hero_right_here_click',{page:'home'})"><span style="cursor:pointer">Right here.</span></a></h1>
 <p class="hero-sub" style="font-weight:600;color:var(--text);margin-top:20px">AI systems that answer your calls, respond to your leads, and write your proposals — done for you in 5 days.</p>
-<p class="hero-sub" style="margin-top:14px">We're the partner in your corner: we build what you need, teach you what you want to know, and stay by your side as your business evolves.</p>
+<p class="hero-sub" style="margin-top:14px"><strong style="color:var(--text)">$2,997 to build. $597/mo flat, covers every system we build for you.</strong> September: 40% off. 30-day money-back guarantee.</p>
 <div class="hero-cta-row">
-<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book a Free Call →</a>
-<a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" class="btn-ghost" style="border:1px solid #22c55e;color:#22c55e">📞 Hear the AI Demo</a>
+<a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35);font-size:1.05rem;padding:18px 40px">📞 Call (425) 437-8836 — Hear It Now</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',value:500,currency:'USD'});" class="btn-ghost">Book a 30-min call →</a>
 </div>
-<p style="margin-top:20px;font-size:.85rem;color:var(--muted)">30-min strategy call · free · no commitment · 30-day money-back guarantee</p>
-<p style="margin-top:8px;font-size:.85rem;color:var(--muted)">Or call our AI directly right now: <a href="tel:+14254378836" style="color:#22c55e;font-weight:700">(425) 437-8836</a></p>
+<p style="margin-top:20px;font-size:.85rem;color:var(--muted)">Free · No commitment · Real AI receptionist on the line, 24/7</p>
 </section>
 
 <section class="stats">
@@ -253,7 +323,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div><div class="stat-num">5 days</div><div class="stat-label">From kickoff to live system</div></div>
 <div><div class="stat-num">24/7</div><div class="stat-label">Answers calls & leads on autopilot</div></div>
 <div><div class="stat-num">30-day</div><div class="stat-label">Money-back guarantee</div></div>
-<div><div class="stat-num">&infin;</div><div class="stat-label">Support calls to fine-tune your system</div></div>
+<div><div class="stat-num">Unlimited</div><div class="stat-label">Support calls to fine-tune your system</div></div>
 </div>
 </section>
 
@@ -314,15 +384,15 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <section class="team" id="team">
 <div class="team-inner">
-<h2>Your success is our success.</h2>
-<p class="sub">Two operators with 25+ combined years helping businesses grow — now bringing that experience to yours.</p>
+<h2>The two humans who'll<br>actually build your system.</h2>
+<p class="sub">Not a team of subcontractors. Not an agency. Two operators, 25+ combined years, one phone number if it breaks.</p>
 <div class="team-cards">
 <div class="t-card">
 <img src="murt.jpg" alt="Taza" class="avatar">
 <div class="name">Taza</div>
-<div class="role">Founder</div>
-<p>Started at <strong>Microsoft Consulting Services</strong> deploying enterprise solutions for Fortune 500s. Rose through Microsoft HQ: Principal Software Engineer → Principal Engineering Manager → Data Scientist.</p>
-<p>Over a decade at Microsoft and 15 years independently helping companies save time and increase profitability. University of Washington alum.</p>
+<div class="role">Founder · Build & AI</div>
+<p>15 years shipping production AI and software for businesses — from Microsoft-scale enterprises to solo consultants. Now focused on one thing: getting AI systems live in your business in 5 days.</p>
+<p><strong>Also teaches AI in classrooms</strong> — which means we can explain any piece of your system in plain English, whenever you want to understand it.</p>
 <p style="color:var(--text);font-size:.86rem"><em>His philosophy: the goal isn't more productivity. It's more freedom. AI just happens to be how we get there.</em></p>
 <a href="https://www.linkedin.com/in/jafferji/" target="_blank">LinkedIn →</a>
 </div>
@@ -330,7 +400,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <img src="jeremy.jpg" alt="Jeremy" class="avatar" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
 <div class="avatar-placeholder" style="display:none">JW</div>
 <div class="name">Jeremy</div>
-<div class="role">Founder</div>
+<div class="role">Founder · Client Success</div>
 <p><strong>12+ years transforming teams and cultures.</strong> Executive coach, facilitator, and leadership developer who's spent his career turning company values into tangible action — and helping people feel <em>empowered, known, seen, and valued</em> in the process.</p>
 <p>At That Was Fast, Jeremy owns the human side: discovery calls, onboarding, and making sure every engagement actually lands with your team. He pinpoints what you need, cuts through complexity, and gets it done properly.</p>
 <p style="color:var(--text);font-size:.86rem"><em>"AI is the leverage. But people are the point. My job is to make sure both win."</em></p>
@@ -390,7 +460,9 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </section>
 
 <footer>
-<p>&copy; 2026 That Was Fast &middot; <a href="tel:+14254378836">(425) 437-8836</a> &middot; <a href="mailto:murt@thatwasfast.ai">murt@thatwasfast.ai</a> &middot; <a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener">Book a call</a></p>
+<p>&copy; <span id="twf-year">2026</span> That Was Fast &middot; <a href="tel:+14254378836">(425) 437-8836</a> &middot; <a href="mailto:murt@thatwasfast.ai">murt@thatwasfast.ai</a> &middot; <a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener">Book a call</a></p>
+<p style="margin-top:8px;font-size:.72rem"><a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
+<script>document.getElementById('twf-year').textContent = new Date().getFullYear();</script>
 </footer>
 
 </body>

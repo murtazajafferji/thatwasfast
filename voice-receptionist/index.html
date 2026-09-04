@@ -10,14 +10,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://thatwasfast.ai/voice-receptionist/">
 <meta property="og:image" content="https://thatwasfast.ai/og-image.png">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="AI Voice Receptionist — That Was Fast">
 <meta name="twitter:description" content="Answers every call. Books appointments. 24/7.">
 <meta name="twitter:image" content="https://thatwasfast.ai/og-image.png">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
 <link rel="apple-touch-icon" href="/icon-192.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- Meta Pixel -->
 <script>
@@ -172,6 +172,41 @@ section{padding:56px 16px}
 .price-amount{font-size:2.4rem}
 }
 </style>
+<link rel="canonical" href="https://thatwasfast.ai/voice-receptionist/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Service","name":"AI Voice Receptionist","description":"24/7 AI voice receptionist that answers calls, qualifies callers, and books appointments. Live in 5 days.","provider":{"@type":"Organization","name":"That Was Fast","url":"https://thatwasfast.ai/"},"areaServed":"US","offers":{"@type":"Offer","priceCurrency":"USD","price":"2997","description":"$2,997 setup + $597/mo flat retainer (covers all systems added)"}}
+</script>
+<script>
+(function(){
+  var page = location.pathname.replace(/\/$/,'').split('/').pop() || 'home';
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href*="cal.com/thatwasfast"]');
+    if (!a) return;
+    if (a.dataset.twfTracked) return;
+    a.dataset.twfTracked = '1';
+    var event = (new URL(a.href).searchParams.get('event')) || page;
+    try{
+      if (window.gtag) gtag('event', 'book_call_click', {page: page, source: 'auto', event_type: event});
+      if (window.gtag) gtag('event', 'generate_lead', {offer: event, source: 'auto'});
+      if (window.twfCapiSend) twfCapiSend('Lead', {content_name: 'Book a Call', content_category: event, value: 500, currency: 'USD'});
+      if (window.fbq) fbq('track', 'Lead', {content_name: 'Book a Call', content_category: event, value: 500, currency: 'USD'});
+    } catch(err){}
+    setTimeout(function(){ delete a.dataset.twfTracked; }, 3000);
+  }, true);
+  document.addEventListener('click', function(e){
+    var a = e.target.closest('a[href^="tel:+1425"]');
+    if (!a) return;
+    if (a.dataset.twfCalltracked) return;
+    a.dataset.twfCalltracked = '1';
+    try{
+      if (window.gtag) gtag('event', 'demo_call', {page: page, source: 'auto'});
+      if (window.twfCapiSend) twfCapiSend('Contact', {content_name: 'Demo Call', content_category: page});
+      if (window.fbq) fbq('track', 'Contact', {content_name: 'Demo Call'});
+    } catch(err){}
+    setTimeout(function(){ delete a.dataset.twfCalltracked; }, 3000);
+  }, true);
+})();
+</script>
 </head>
 <body>
 
@@ -192,18 +227,23 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>
-<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="nav-cta">Book a Call</a>
+<div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
+<a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600">Voice</a>
+<a href="/lead-response/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Lead Response</a>
+<a href="/auto-proposal/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Proposals</a>
+<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'voice-receptionist',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'voice-receptionist',value:500,currency:'USD'});" class="nav-cta">Book Call</a>
+</div>
 </nav>
 
 <section class="hero">
-<div class="eyebrow"><span class="dot"></span>NEW OFFER · ANSWERS 24/7</div>
+<div class="eyebrow"><span class="dot"></span>LIVE DEMO · CALL (425) 437-8836</div>
 <h1>Answer every call.<br>Book every job.<br><span>Even at 2 AM on a Sunday.</span></h1>
 <p class="hero-sub">A voice AI that sounds like you (or your best receptionist), answers every incoming call, qualifies the caller, books the appointment, and syncs to your calendar — <strong>24/7, never sick, never on lunch break</strong>. Built in 5 days.</p>
 <div class="hero-cta-row">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'voice-receptionist',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'voice-receptionist'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35)">📞 Try the Live Demo → (425) 437-8836</a>
 <a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-ghost">Book a Strategy Call</a>
 </div>
-<p class="hero-note" style="margin-top:16px">Call the number above <strong>right now</strong> — real AI receptionist, 24/7. Then <a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline">book a call</a> to build one for your business. $3,500 setup · $500/mo · 5-day delivery.</p>
+<p class="hero-note" style="margin-top:16px">Call the number above <strong>right now</strong> — real AI receptionist, 24/7. Then <a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline">book a call</a> to build one for your business. $2,997 setup · $597/mo flat · 5-day delivery.</p>
 </section>
 
 <section style="padding:80px 24px;background:var(--surface)">
@@ -361,7 +401,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </div>
 <div class="faq-item">
 <div class="faq-q">How much do call minutes actually cost?</div>
-<div class="faq-a">About $0.10-$0.20 per minute of actual conversation, depending on voice quality tier. A typical booked-appointment call is 2-4 minutes. If you handle 500 calls/month, expect ~$100-$200 in call costs on top of the $500/mo platform fee.</div>
+<div class="faq-a">About $0.10-$0.20 per minute of actual conversation, depending on voice quality tier. A typical booked-appointment call is 2-4 minutes. If you handle 500 calls/month, expect ~$100-$200 in call costs on top of the $597/mo platform fee.</div>
 </div>
 <div class="faq-item">
 <div class="faq-q">30-day guarantee — how does it work?</div>
