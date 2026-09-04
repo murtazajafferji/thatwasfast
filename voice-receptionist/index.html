@@ -19,19 +19,21 @@
 <link rel="apple-touch-icon" href="/icon-192.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<!-- Google Analytics -->
+<!-- Google Analytics + Google Ads -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YH6KCPB6RQ"></script>
 <script>
 window.dataLayer=window.dataLayer||[];
 function gtag(){dataLayer.push(arguments)}
 gtag('js',new Date());
 gtag('config','G-YH6KCPB6RQ',{page_title:'Voice Receptionist Offer',page_path:'/voice-receptionist/'});
+gtag('config','AW-18429599857');
 document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('a[href*="cal.com/thatwasfast"]').forEach(function(a){
     a.addEventListener('click',function(){
       var loc=a.closest('nav')?'nav':(a.closest('.final')?'final':(a.closest('.price-card')?'pricing':'hero'));
       gtag('event','book_call_click',{page:'voice-receptionist',cta_location:loc});
       gtag('event','generate_lead',{offer:'voice-receptionist',source:loc});
+      gtag('event','conversion',{send_to:'AW-18429599857/CONVERSION_LABEL',value:500,currency:'USD'});
     });
   });
 });
