@@ -138,6 +138,31 @@ details summary{min-height:32px}
 @media(max-width:600px){
   footer a{padding:8px 4px}
 }
+
+/* MOBILE NAV — secondary links collapse, logo + primary CTA stay (fix: nav was 642px wide on a 375px screen) */
+.nav-secondary{display:flex;gap:8px;align-items:center}
+nav .nav-cta{padding:9px 16px;font-size:.8rem}
+@media(max-width:860px){
+  .nav-secondary{display:none}
+  nav{padding:12px 14px;gap:10px}
+  nav .nav-cta{padding:10px 14px;font-size:.8rem}
+  .nav-phone{display:inline-flex !important;align-items:center;justify-content:center;min-width:42px;height:38px;border:1px solid var(--border);border-radius:8px;font-size:1rem}
+  .nav-phone .nav-phone-label{display:none}
+  .logo{font-size:.92rem}
+}
+@media(max-width:380px){
+  nav{padding:10px 12px}
+  nav .nav-cta{padding:9px 12px;font-size:.74rem}
+  .logo{font-size:.85rem}
+}
+
+/* PROMO BAR — was eating 3 lines on a 375px phone and shoving the nav down */
+.promo-bar{font-size:.85rem;line-height:1.45}
+.promo-bar .promo-cta{color:#fff;text-decoration:underline;font-weight:700;white-space:nowrap}
+@media(max-width:600px){
+  .promo-bar{font-size:.74rem;padding:8px 12px !important;line-height:1.35}
+  .promo-bar .promo-long{display:none}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -149,7 +174,7 @@ details summary{min-height:32px}
 </head>
 <body>
 
-<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off every build. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30. <a href="https://cal.com/thatwasfast/30min?event=pricing-banner" style="color:#fff;text-decoration:underline;font-weight:700" target="_blank" rel="noopener">Get your build date →</a></div>
+<div class="promo-bar" style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off<span class="promo-long"> every build</span>. <strong id="spots-left">Only 5 spots left</strong><span class="promo-long"> · Book by Sept 30</span>. <a href="https://cal.com/thatwasfast/30min?event=pricing-banner" class="promo-cta" target="_blank" rel="noopener">Get your build date →</a></div>
 <script>
 window.TWF_SPOTS_LEFT = 5;
 window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
@@ -166,9 +191,11 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>
 <div style="display:flex;gap:8px;align-items:center">
+<span class="nav-secondary">
 <a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a>
-<a href="tel:+14254378836" style="padding:8px 12px;background:transparent;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:.78rem;border-radius:8px;white-space:nowrap">📞 Live Demo</a>
-<a href="https://cal.com/thatwasfast/30min?event=pricing-nav" target="_blank" rel="noopener" class="nav-cta">Book the 30-min consult</a>
+</span>
+<a href="tel:+14254378836" class="nav-phone" aria-label="Call the live AI demo at (425) 437-8836" style="padding:8px 12px;background:transparent;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:.78rem;border-radius:8px;white-space:nowrap">📞<span class="nav-phone-label"> Live Demo</span></a>
+<a href="https://cal.com/thatwasfast/30min?event=pricing-nav" target="_blank" rel="noopener" class="nav-cta">Book the consult</a>
 </div>
 </nav>
 

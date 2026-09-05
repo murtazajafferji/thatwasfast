@@ -68,7 +68,7 @@ html,body{overflow-x:hidden}
 body{font-family:'Inter',system-ui,sans-serif;background:var(--bg);color:var(--text);-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
 
-nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:16px 16px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,9,11,.8);backdrop-filter:blur(20px)}
+nav{position:sticky;top:0;z-index:100;padding:16px 16px;display:flex;align-items:center;justify-content:space-between;background:rgba(9,9,11,.8);backdrop-filter:blur(20px)}
 .logo{font-weight:900;font-size:1rem;letter-spacing:-.02em;white-space:nowrap}
 .logo span{color:var(--gold)}
 .nav-cta{padding:8px 16px;background:var(--gold);color:var(--white);font-weight:700;font-size:.82rem;border-radius:8px;transition:transform .15s;white-space:nowrap}
@@ -159,7 +159,7 @@ footer a{color:var(--gold)}
 nav{padding:12px 12px}
 .nav-cta{padding:7px 12px;font-size:.75rem}
 .logo{font-size:.88rem}
-.hero{padding-top:90px;min-height:auto;padding-bottom:60px}
+.hero{padding-top:40px;min-height:auto;padding-bottom:60px}
 .hero h1{font-size:2rem}
 .hero-sub{font-size:.95rem}
 .hero-cta-row{flex-direction:column;align-items:center;gap:12px}
@@ -179,6 +179,30 @@ nav a{display:inline-flex;align-items:center;min-height:38px}
 details summary{min-height:32px}
 @media(max-width:600px){
   footer a{padding:8px 4px}
+}
+
+/* MOBILE NAV — secondary links collapse, logo + primary CTA stay (fix: nav was 642px wide on a 375px screen) */
+.nav-secondary{display:flex;gap:8px;align-items:center}
+nav .nav-cta{padding:9px 16px;font-size:.8rem}
+@media(max-width:860px){
+  .nav-secondary{display:none}
+  nav{padding:12px 14px;gap:10px}
+  nav .nav-cta{padding:10px 14px;font-size:.8rem}
+  .nav-phone{display:inline-flex !important;align-items:center;justify-content:center;min-width:42px;height:38px;border:1px solid var(--border);border-radius:8px;font-size:1rem}
+  .nav-phone .nav-phone-label{display:none}
+  .logo{font-size:.92rem}
+}
+@media(max-width:380px){
+  nav{padding:10px 12px}
+  nav .nav-cta{padding:9px 12px;font-size:.74rem}
+  .logo{font-size:.85rem}
+}
+
+/* PROMO BAR — mobile compaction */
+.promo-bar{font-size:.85rem;line-height:1.45}
+@media(max-width:600px){
+  .promo-bar{font-size:.74rem;padding:8px 12px !important;line-height:1.35}
+  .promo-bar .promo-long{display:none}
 }
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/auto-proposal/">
@@ -219,7 +243,7 @@ details summary{min-height:32px}
 </head>
 <body>
 
-<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30.</div>
+<div class="promo-bar" style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off<span class="promo-long"> every offer</span>. <strong id="spots-left">Only 5 spots left</strong><span class="promo-long"> · Book by Sept 30</span>.</div>
 <script>
 window.TWF_SPOTS_LEFT = 5;
 window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
@@ -236,11 +260,13 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <nav>
 <a href="/" class="logo">that was <span>fast</span></a>
-<div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap">
-<a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Voice</a>
+<div style="display:flex;gap:8px;align-items:center">
+<span class="nav-secondary" style="gap:6px"><a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Voice</a>
 <a href="/lead-response/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Lead Response</a>
 <a href="/auto-proposal/" style="padding:6px 10px;font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600">Proposals</a>
-<a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a><a href="https://cal.com/thatwasfast/30min?event=auto-proposal" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'auto-proposal',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'auto-proposal',value:500,currency:'USD'});" class="nav-cta">Book the consult</a>
+<a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a></span>
+<a href="tel:+14254378836" class="nav-phone" aria-label="Call the live AI demo at (425) 437-8836" onclick="if(window.gtag)gtag('event','demo_call',{page:'auto-proposal',source:'nav'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'auto-proposal'});" style="padding:8px 12px;background:transparent;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:.78rem;border-radius:8px;white-space:nowrap">📞<span class="nav-phone-label"> Live Demo</span></a>
+<a href="https://cal.com/thatwasfast/30min?event=auto-proposal" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'auto-proposal',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'auto-proposal',value:500,currency:'USD'});" class="nav-cta">Book the consult</a>
 </div>
 </nav>
 
