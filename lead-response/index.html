@@ -171,6 +171,15 @@ section{padding:56px 16px}
 .price-card{padding:32px 20px}
 .price-amount{font-size:2.4rem}
 }
+
+/* a11y + tap targets (round-2 audit) */
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+footer a{display:inline-block;padding:6px 2px}
+nav a{display:inline-flex;align-items:center;min-height:38px}
+details summary{min-height:32px}
+@media(max-width:600px){
+  footer a{padding:8px 4px}
+}
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/lead-response/">
 <script type="application/ld+json">
@@ -231,7 +240,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Voice</a>
 <a href="/lead-response/" style="padding:6px 10px;font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600">Lead Response</a>
 <a href="/auto-proposal/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Proposals</a>
-<a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a><a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'lead-response',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'lead-response',value:500,currency:'USD'});" class="nav-cta">Book Call</a>
+<a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a><a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'lead-response',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'lead-response',value:500,currency:'USD'});" class="nav-cta">Book the consult</a>
 </div>
 </nav>
 
@@ -240,7 +249,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <h1>Reply to every lead<br>in under 5 minutes.<br><span>Close 21× more.</span></h1>
 <p class="hero-sub">While your competitors take 24 hours to respond, our AI qualifies your lead, books the call, and follows up — <strong>in the time it takes to make coffee</strong>. Built in 5 days. Runs forever.</p>
 <div class="hero-cta-row">
-<a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" class="btn-primary">Book a Free Strategy Call →</a>
+<a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" class="btn-primary">Book the 30-min consult →</a>
 <a href="#how" class="btn-ghost">See How It Works</a>
 </div>
 <p class="hero-note">$2,997 setup · $597/mo flat (covers all systems) · 5-day delivery · 30-day guarantee</p>
@@ -371,7 +380,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <li><span class="check">✓</span><span>Priority Slack/text support</span></li>
 <li><span class="check">✓</span><span>Cancel anytime after month 3 — you keep everything</span></li>
 </ul>
-<a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" class="btn-primary" style="width:100%;text-align:center;font-size:1.05rem">Book a Free Strategy Call →</a>
+<a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" class="btn-primary" style="width:100%;text-align:center;font-size:1.05rem">Book the 30-min consult →</a>
 <p class="price-note">Not sure yet? The 30-min strategy call is free. No pitch. Just an honest look at whether this fits.</p>
 </div>
 </div>
@@ -452,7 +461,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <section class="final">
 <h2>Stop losing leads<br><span>to slow inboxes.</span></h2>
 <p>The first vendor to reply wins. Make sure that's always you. Free 30-min strategy call — we tell you honestly whether this fits your business.</p>
-<a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book a Free Call →</a>
+<a href="https://cal.com/thatwasfast/30min?event=lead-response" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book the 30-min consult →</a>
 </section>
 
 <footer>

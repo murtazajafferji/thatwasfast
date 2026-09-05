@@ -206,6 +206,15 @@ section{padding:56px 16px}
 .final-cta h2{font-size:1.6rem}
 .t-card{padding:24px}
 }
+
+/* a11y + tap targets (round-2 audit) */
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+footer a{display:inline-block;padding:6px 2px}
+nav a{display:inline-flex;align-items:center;min-height:38px}
+details summary{min-height:32px}
+@media(max-width:600px){
+  footer a{padding:8px 4px}
+}
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/">
 <script type="application/ld+json">
@@ -285,7 +294,7 @@ section{padding:56px 16px}
 </head>
 <body>
 
-<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30. <a href="https://cal.com/thatwasfast/30min" style="color:#fff;text-decoration:underline;font-weight:700" target="_blank" rel="noopener">Claim your spot →</a></div>
+<div style="background:linear-gradient(90deg,#22c55e,#16a34a);color:#fff;text-align:center;padding:10px 16px;font-size:.85rem;font-weight:600;position:relative;z-index:101"><strong>🎯 SEPTEMBER SPECIAL</strong> — 40% off every offer. <strong id="spots-left">Only 5 spots left</strong> · Book by Sept 30. <a href="https://cal.com/thatwasfast/30min" style="color:#fff;text-decoration:underline;font-weight:700" target="_blank" rel="noopener">Get your build date →</a></div>
 <script>
 // SPOTS_LEFT: single source of truth — edit this number as bookings come in
 window.TWF_SPOTS_LEFT = 5;
@@ -309,18 +318,18 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <a href="#how" class="nav-link" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a>
 <a href="/pricing/" class="nav-link" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a>
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'nav'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" style="padding:8px 12px;background:transparent;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:.78rem;border-radius:8px;white-space:nowrap">📞 Live Demo</a>
-<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="nav-cta">Book Free Strategy Call</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="nav-cta">Book the 30-min consult</a>
 </div>
 </nav>
 
 <section class="hero">
 <h1>Where does your business<br>even start with AI?<br><a href="#services" style="text-decoration:none" onclick="if(window.gtag)gtag('event','hero_right_here_click',{page:'home'})"><span style="cursor:pointer">Right here.</span></a></h1>
-<p class="hero-sub" style="font-weight:600;color:var(--text);margin-top:20px">Your AI support takes care of the mindless, so you can be more mindful.</p>
-<p class="hero-sub" style="margin-top:14px">We build the systems that handle the calls, the follow-ups, and the paperwork — so your time goes back to the people and the work that actually need you. Three systems ready to ship this week, a step-by-step process, and a team around you the whole way.</p>
+<p class="hero-sub" style="font-weight:600;color:var(--text);margin-top:20px">We build the AI systems that answer your calls, reply to your leads, and get your proposals out the same day — live in 5 business days, on the tools you already use.</p>
+<p class="hero-sub" style="margin-top:14px">Your AI support takes care of the mindless, so you can be more mindful — with your customers, your team, and the work only you can do.</p>
 <p class="hero-sub" style="margin-top:14px"><span style="text-decoration:line-through;color:var(--muted)">$4,997 setup + $997/mo</span> &nbsp;→&nbsp; <strong style="color:var(--text)">$2,997 setup per system + $597/mo flat</strong> (September, 40% off).<br><span style="font-size:.9rem">Monthly covers <strong style="color:var(--text)">unlimited support, tuning, and adjustments</strong> across every system we build with you. 30-day money-back.</span></p>
 <div class="hero-cta-row">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35);font-size:1.05rem;padding:18px 40px">📞 Call (425) 437-8836 — Hear It Now</a>
-<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',value:500,currency:'USD'});" class="btn-ghost">Book a 30-min call →</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',value:500,currency:'USD'});" class="btn-ghost">Book the consult — leave with a plan →</a>
 </div>
 <p style="margin-top:20px;font-size:.85rem;color:var(--muted)">Free · No commitment · Real AI receptionist on the line, 24/7</p>
 </section>
@@ -333,6 +342,36 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div><div class="stat-num">Unlimited</div><div class="stat-label">Support calls to fine-tune your system</div></div>
 </div>
 </section>
+
+<!-- LEAK ROUTER -->
+<section style="padding:70px 24px;border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+<h2 style="text-align:center;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:900;line-height:1.2;margin-bottom:10px">Which leak is costing you<br>the most right now?</h2>
+<p style="text-align:center;color:var(--muted);font-size:1rem;margin-bottom:34px">Pick the one that stings. We'll show you the fix and what it's worth.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="leak-grid">
+<a href="/voice-receptionist/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid #22c55e;border-radius:14px;padding:24px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='#22c55e'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)';this.style.borderLeftColor='#22c55e'">
+<div style="font-size:1.5rem;margin-bottom:10px">📞</div>
+<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We're missing calls."</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Ringing while you're on a job, after hours, on weekends. Most callers don't leave a voicemail — they call the next business.</div>
+<div style="font-size:.85rem;font-weight:700;color:#22c55e">Fix it with an AI receptionist →</div>
+</a>
+<a href="/lead-response/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:24px;transition:transform .15s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="font-size:1.5rem;margin-bottom:10px">⏱️</div>
+<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We reply to leads too slow."</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Form fills and DMs sitting for hours. Replying in 5 minutes instead of 30 makes a lead 21× more likely to convert.</div>
+<div style="font-size:.85rem;font-weight:700;color:var(--gold)">Fix it with AI lead response →</div>
+</a>
+<a href="/auto-proposal/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:24px;transition:transform .15s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="font-size:1.5rem;margin-bottom:10px">📄</div>
+<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"Proposals go out days late."</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Written at 9pm after the real work. By the time it lands, the client has cooled off or already signed elsewhere.</div>
+<div style="font-size:.85rem;font-weight:700;color:var(--gold)">Fix it with same-day proposals →</div>
+</a>
+</div>
+<p style="text-align:center;margin-top:24px;font-size:.94rem;color:var(--muted)">More than one? That's normal — <a href="#calc" style="color:var(--gold);font-weight:700">run the numbers below</a> and we'll sequence them on the consult.</p>
+</div>
+</section>
+<style>@media(max-width:800px){.leak-grid{grid-template-columns:1fr !important}}</style>
 
 <!-- PAIN OF STAYING THE SAME -->
 <section style="padding:90px 24px;background:linear-gradient(180deg,var(--bg),rgba(239,68,68,.03))">
@@ -373,7 +412,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <!-- FEAR REMOVAL -->
 <section style="padding:80px 24px;background:var(--surface)">
 <div style="max-width:var(--max);margin:0 auto;text-align:center">
-<h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:14px">Everything you're worried about,<br><span style="color:var(--gold)">already handled.</span></h2>
+<h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:14px">The hard part isn't AI.<br><span style="color:var(--gold)">It's change. We remove that part.</span></h2>
 <p style="color:var(--muted);font-size:1rem;margin-bottom:40px">The pain of change should be close to zero. Here's how we get it there.</p>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left" class="fear-grid">
 <div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"It'll sound like a robot."</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">Call <a href="tel:+14254378836" style="color:#22c55e;font-weight:700">(425) 437-8836</a> right now and judge for yourself. No form, no demo request, no salesperson. That's the actual product.</div></div>
@@ -400,7 +439,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
 <div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">01</div>
 <div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Consult call — 30 minutes, free</div>
+<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Free Ops Leak Analysis — 30 minutes</div>
 <p style="font-size:.95rem;color:var(--muted);line-height:1.6">We map where your time and money leak: missed calls, slow lead follow-up, proposals, admin. You leave with a written recommendation and the numbers behind it — whether or not you hire us. No pitch deck, no pressure.</p>
 <div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Your time: 30 min</div>
 </div>
@@ -462,16 +501,112 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 </div>
 <div style="text-align:center;margin-top:44px">
-<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;font-size:1.02rem;padding:17px 38px">Start with step 1 — book the consult →</a>
+<a href="https://cal.com/thatwasfast/30min?event=ops-leak-analysis" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;font-size:1.02rem;padding:17px 38px">Get your free Ops Leak Analysis →</a>
 <p style="margin-top:14px;font-size:.88rem;color:var(--muted)">Free. 30 minutes. You leave with a plan either way.</p>
 </div>
 </div>
 </section>
 <style>@media(max-width:600px){.step-row{flex-direction:column;gap:8px}}</style>
 
+<!-- ROI CALCULATOR -->
+<section id="calc" style="padding:90px 24px;background:linear-gradient(180deg,var(--surface),var(--bg))">
+<div style="max-width:900px;margin:0 auto">
+<div style="text-align:center;margin-bottom:40px">
+<div style="font-size:.75rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Run your own numbers</div>
+<h2 style="font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:900;line-height:1.15;margin-bottom:14px">Don't take our word for it.<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Do the math yourself.</span></h2>
+<p style="font-size:1rem;color:var(--muted);max-width:620px;margin:0 auto;line-height:1.6">Four numbers you already know. Nothing gets sent anywhere — this runs entirely in your browser.</p>
+</div>
+
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:18px;padding:32px" class="calc-box">
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:26px" class="calc-inputs">
+<div>
+<label for="c-calls" style="display:block;font-size:.88rem;font-weight:700;margin-bottom:8px">Calls you miss in a typical week</label>
+<input id="c-calls" type="number" min="0" value="12" style="width:100%;padding:13px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1.05rem;font-weight:700;font-family:inherit">
+</div>
+<div>
+<label for="c-job" style="display:block;font-size:.88rem;font-weight:700;margin-bottom:8px">Average value of one job ($)</label>
+<input id="c-job" type="number" min="0" value="500" style="width:100%;padding:13px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1.05rem;font-weight:700;font-family:inherit">
+</div>
+<div>
+<label for="c-close" style="display:block;font-size:.88rem;font-weight:700;margin-bottom:8px">Of the calls you DO answer, what % become jobs?</label>
+<input id="c-close" type="number" min="0" max="100" value="30" style="width:100%;padding:13px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1.05rem;font-weight:700;font-family:inherit">
+</div>
+<div>
+<label for="c-hours" style="display:block;font-size:.88rem;font-weight:700;margin-bottom:8px">Hours/week on follow-up &amp; paperwork</label>
+<input id="c-hours" type="number" min="0" value="6" style="width:100%;padding:13px 14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;color:var(--text);font-size:1.05rem;font-weight:700;font-family:inherit">
+</div>
+</div>
+
+<div style="border-top:1px solid var(--border);padding-top:26px">
+<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;text-align:center" class="calc-out">
+<div><div style="font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:6px">Revenue walking away</div><div id="c-lost" style="font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:#ef4444">$93,600</div><div style="font-size:.75rem;color:var(--muted)">per year, missed calls only</div></div>
+<div><div style="font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:6px">Hours back to you</div><div id="c-time" style="font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(--gold)">234</div><div style="font-size:.75rem;color:var(--muted)">per year, ~75% of admin time</div></div>
+<div><div style="font-size:.78rem;color:var(--muted);font-weight:600;margin-bottom:6px">Cost of the system</div><div id="c-cost" style="font-size:clamp(1.5rem,3.5vw,2.1rem);font-weight:900;color:var(--text)">$10,161</div><div style="font-size:.75rem;color:var(--muted)">year 1, all-in</div></div>
+</div>
+<div id="c-verdict" style="margin-top:24px;padding:22px;border-radius:14px;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(22,163,74,.04));border:1px solid #22c55e;text-align:center">
+<div style="font-size:1.05rem;line-height:1.6;color:var(--text)"></div>
+</div>
+<p style="font-size:.8rem;color:var(--muted);margin-top:16px;line-height:1.55;text-align:center">Assumes the AI recovers ~60% of missed calls (conservative — it answers 100%, but not every caller converts) and takes back ~75% of admin time. Year-1 cost = $2,997 setup + 12 × $597. Your actual results depend on your business; this is an estimate to bring to the consult, not a promise.</p>
+</div>
+
+<div style="text-align:center;margin-top:26px">
+<a href="https://cal.com/thatwasfast/30min?event=calculator" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;font-size:1rem;padding:16px 34px">Bring these numbers to the consult →</a>
+</div>
+</div>
+</div>
+</section>
+<style>
+@media(max-width:700px){.calc-inputs{grid-template-columns:1fr !important}.calc-out{grid-template-columns:1fr !important;gap:22px !important}.calc-box{padding:22px !important}}
+#calc input:focus{outline:2px solid var(--gold);outline-offset:1px;border-color:var(--gold)}
+</style>
+<script>
+(function(){
+  var ids=['c-calls','c-job','c-close','c-hours'];
+  var fmt=function(n){return '$'+Math.round(n).toLocaleString('en-US');};
+  function calc(){
+    var calls=Math.max(0,+document.getElementById('c-calls').value||0);
+    var job=Math.max(0,+document.getElementById('c-job').value||0);
+    var close=Math.min(100,Math.max(0,+document.getElementById('c-close').value||0))/100;
+    var hours=Math.max(0,+document.getElementById('c-hours').value||0);
+    var lostYr=calls*52*close*job;
+    var recovered=lostYr*0.6;
+    var hoursBack=Math.round(hours*52*0.75);
+    var cost=2997+(597*12);
+    document.getElementById('c-lost').textContent=fmt(lostYr);
+    document.getElementById('c-time').textContent=hoursBack.toLocaleString('en-US');
+    document.getElementById('c-cost').textContent=fmt(cost);
+    var net=recovered-cost;
+    var el=document.getElementById('c-verdict');
+    var inner=el.firstElementChild;
+    if(lostYr<=0&&hoursBack<=0){
+      el.style.background='var(--surface)';el.style.borderColor='var(--border)';
+      inner.innerHTML='Put your numbers in above and we\'ll do the math.';
+    } else if(net>0){
+      el.style.background='linear-gradient(135deg,rgba(34,197,94,.12),rgba(22,163,74,.04))';el.style.borderColor='#22c55e';
+      inner.innerHTML='Recovering just <strong>60% of those missed calls</strong> is <strong style="color:#22c55e">'+fmt(recovered)+'</strong> in year one — <strong style="color:#22c55e">'+fmt(net)+' more than the system costs</strong>, plus <strong>'+hoursBack.toLocaleString('en-US')+' hours</strong> back in your week.';
+    } else {
+      el.style.background='var(--surface)';el.style.borderColor='var(--border)';
+      inner.innerHTML='At these numbers the revenue case is thin — you\'d recover about <strong>'+fmt(recovered)+'</strong> against <strong>'+fmt(cost)+'</strong> in cost. <strong>We\'d tell you that on the call.</strong> The <strong>'+hoursBack.toLocaleString('en-US')+' hours</strong> back might still be worth it, or the <a href="/pricing/" style="color:var(--gold);font-weight:700">DIY Blueprint</a> may fit you better.';
+    }
+  }
+  ids.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el){el.addEventListener('input',calc);}
+  });
+  var fired=false;
+  ids.forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.addEventListener('change',function(){
+      if(!fired){fired=true;if(window.gtag)gtag('event','calculator_used',{page:'home'});if(window.twfCapiSend)twfCapiSend('ViewContent',{content_name:'ROI Calculator',content_category:'home'});}
+    });
+  });
+  calc();
+})();
+</script>
+
 <section class="services" id="services">
 <div class="services-inner">
-<h2 style="text-align:center;margin-bottom:12px">Start with something<br><span style="color:var(--gold)">ready in 5 days.</span></h2>
+<h2 style="text-align:center;margin-bottom:12px">Start with one system<br><span style="color:var(--gold)">that goes live in 5 business days.</span></h2>
 <p style="text-align:center;color:var(--muted);font-size:1.05rem;max-width:640px;margin:0 auto 48px">These three ship this week. Then we keep going — automating whatever else drains your time so you can focus on what you're actually great at. Every system is full production, tailored to your workflow, integrated with your tools (CRM, calendar, phone, email). Try the voice demo before you even book a call.</p>
 <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="featured-offers">
 
@@ -590,7 +725,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <div style="background:var(--bg);border:1px solid #22c55e;border-radius:16px;padding:30px">
 <div style="font-size:.7rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Referral rewards</div>
-<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Refer three. Stop paying.</h3>
+<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Refer three businesses. Your monthly drops to zero.</h3>
 <p style="font-size:.94rem;color:var(--muted);line-height:1.6;margin-bottom:20px">Every business you send us that goes live knocks a permanent chunk off your monthly — and they get $500 off their setup as your introduction.</p>
 <div style="display:flex;flex-direction:column;gap:10px">
 <div style="display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px"><div style="font-size:1.15rem;font-weight:900;color:#22c55e;min-width:38px">1</div><div style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--text)">$597 → $397/mo</strong> forever, plus $500 off for them</div></div>
@@ -603,7 +738,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <div style="background:var(--bg);border:1px solid var(--gold);border-radius:16px;padding:30px">
 <div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Partnerships</div>
-<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Sell it as your own. Or just get paid.</h3>
+<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Bring AI to your clients without building a delivery team.</h3>
 <p style="font-size:.94rem;color:var(--muted);line-height:1.6;margin-bottom:20px">If you already serve service businesses — agency, consultant, coach, bookkeeper, MSP, franchise group — your clients are asking you about AI right now. Come answer them with something real.</p>
 <div style="display:flex;flex-direction:column;gap:12px">
 <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-weight:800;font-size:.98rem;margin-bottom:4px">🤝 Affiliate</div><div style="font-size:.88rem;color:var(--muted);line-height:1.55">Send an intro, we do the rest. <strong style="color:var(--text)">20% of setup + 20% of monthly for 12 months.</strong> Nothing to learn, nothing to support.</div></div>
@@ -617,6 +752,59 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </div>
 </section>
 <style>@media(max-width:800px){.ref-grid{grid-template-columns:1fr !important}}</style>
+
+<!-- PROOF WITHOUT LOGOS -->
+<section style="padding:90px 24px;background:var(--surface);border-top:1px solid var(--border)">
+<div style="max-width:var(--max);margin:0 auto">
+<div style="text-align:center;margin-bottom:42px">
+<div style="font-size:.75rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Proof you can check yourself</div>
+<h2 style="font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:900;line-height:1.15;margin-bottom:16px">We'd rather show you<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">than tell you.</span></h2>
+<p style="font-size:1.02rem;color:var(--muted);max-width:680px;margin:0 auto;line-height:1.65">Anyone can put five-star quotes on a website. You can't verify those. You <em>can</em> verify a phone number that answers, so that's what we lead with.</p>
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px" class="proof-grid">
+
+<div style="background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(22,163,74,.03));border:1px solid #22c55e;border-radius:16px;padding:30px">
+<div style="font-size:.7rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Test it right now</div>
+<h3 style="font-size:1.25rem;font-weight:800;margin-bottom:10px">Call the AI and try to break it.</h3>
+<p style="font-size:.94rem;color:var(--muted);line-height:1.6;margin-bottom:16px">It's live 24/7 and it will actually book a real appointment on a real calendar. Don't be polite with it — here's what we'd try:</p>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.95;margin-bottom:20px">
+<div>1. <strong style="color:var(--text)">Interrupt it mid-sentence.</strong> See if it recovers like a person would.</div>
+<div>2. <strong style="color:var(--text)">Ask what it costs.</strong> Watch it handle a pricing question.</div>
+<div>3. <strong style="color:var(--text)">Ask for a human.</strong> See how it escalates.</div>
+<div>4. <strong style="color:var(--text)">Book something.</strong> The appointment is real — you'll get the confirmation.</div>
+<div>5. <strong style="color:var(--text)">Ask it something off-script.</strong> Find the edges. They exist, and we'll tell you where.</div>
+</div>
+<a href="tel:+14254378836" class="btn-primary" style="display:inline-block;background:linear-gradient(135deg,#22c55e,#16a34a);font-size:1rem;padding:15px 30px">📞 Call (425) 437-8836 now</a>
+</div>
+
+<div style="display:flex;flex-direction:column;gap:18px">
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px">
+<div style="font-size:1.4rem;margin-bottom:8px">🔍</div>
+<h3 style="font-size:1.1rem;font-weight:800;margin-bottom:6px">You see the whole build, not a black box</h3>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.6">Every prompt, every integration, every decision the system makes is visible to you and explained in plain English whenever you ask. No "proprietary secret sauce" hand-waving.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px">
+<div style="font-size:1.4rem;margin-bottom:8px">🔑</div>
+<h3 style="font-size:1.1rem;font-weight:800;margin-bottom:6px">It runs on your accounts, not ours</h3>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.6">Your phone number, your OpenAI and Vapi accounts, your CRM, your data. Cancel us and the system keeps running. We can't hold your business hostage — by design.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px">
+<div style="font-size:1.4rem;margin-bottom:8px">📋</div>
+<h3 style="font-size:1.1rem;font-weight:800;margin-bottom:6px">Fixed scope and price, in writing, before anything starts</h3>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.6">One working call, then a written one-pager within 24 hours: what we build, what it connects to, what it costs, when it's live. No discovery month, no scope creep, no surprise invoice.</p>
+</div>
+<div style="background:var(--bg);border:1px solid var(--border);border-radius:16px;padding:26px">
+<div style="font-size:1.4rem;margin-bottom:8px">🛡️</div>
+<h3 style="font-size:1.1rem;font-weight:800;margin-bottom:6px">We carry the risk for the first 30 days</h3>
+<p style="font-size:.92rem;color:var(--muted);line-height:1.6">Not seeing measurable results in the first month? We refund the setup fee. We'd rather return money than have you tell other owners it didn't work.</p>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+<style>@media(max-width:850px){.proof-grid{grid-template-columns:1fr !important}}</style>
 
 <section class="team" id="team">
 <div class="team-inner">
@@ -671,7 +859,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <section style="padding:80px 24px" id="faq">
 <div style="max-width:820px;margin:0 auto">
-<h2 style="text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:48px">Common questions.<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Straight answers.</span></h2>
+<h2 style="text-align:center;font-size:clamp(1.8rem,4vw,2.6rem);font-weight:900;margin-bottom:48px">Questions owners ask before<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">trusting AI with the front desk.</span></h2>
 <div style="display:flex;flex-direction:column;gap:20px">
 <details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
 <summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What if AI doesn't work for my industry?</summary>
@@ -726,12 +914,13 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <p style="max-width:640px;margin:0 auto 36px">Call <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'final-text'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" style="color:#22c55e;font-weight:800;text-decoration:underline">(425) 437-8836</a> right now — it's a real AI receptionist, answering 24/7. Once you hear it, book the 30-minute consult. You leave with a written plan and the numbers behind it whether or not you hire us. Free. No commitment. 30-day guarantee if you do.</p>
 <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'final'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35);font-size:1.05rem;padding:18px 40px">📞 Call the Demo</a>
-<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book a Free Call →</a>
+<a href="https://cal.com/thatwasfast/30min?event=home-final" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book the 30-min consult →</a>
 </div>
 </section>
 
 <footer>
 <p>&copy; <span id="twf-year">2026</span> That Was Fast &middot; <a href="tel:+14254378836">(425) 437-8836</a> &middot; <a href="mailto:murt@thatwasfast.ai">murt@thatwasfast.ai</a> &middot; <a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener">Book a call</a></p>
+<p style="margin-top:10px;font-size:.8rem;color:var(--text)">AI systems for service businesses. Answer every call. Reply to every lead. Send proposals same-day.</p>
 <p style="margin-top:8px;font-size:.78rem"><a href="#how">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="#partners">Referrals &amp; Partners</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
 <script>document.getElementById('twf-year').textContent = new Date().getFullYear();</script>
 </footer>

@@ -171,6 +171,15 @@ section{padding:56px 16px}
 .price-card{padding:32px 20px}
 .price-amount{font-size:2.4rem}
 }
+
+/* a11y + tap targets (round-2 audit) */
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px;border-radius:4px}
+footer a{display:inline-block;padding:6px 2px}
+nav a{display:inline-flex;align-items:center;min-height:38px}
+details summary{min-height:32px}
+@media(max-width:600px){
+  footer a{padding:8px 4px}
+}
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/voice-receptionist/">
 <script type="application/ld+json">
@@ -231,7 +240,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600">Voice</a>
 <a href="/lead-response/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Lead Response</a>
 <a href="/auto-proposal/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Proposals</a>
-<a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a><a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'voice-receptionist',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'voice-receptionist',value:500,currency:'USD'});" class="nav-cta">Book Call</a>
+<a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a><a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'voice-receptionist',source:'nav'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'voice-receptionist',value:500,currency:'USD'});" class="nav-cta">Book the consult</a>
 </div>
 </nav>
 
@@ -241,7 +250,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <p class="hero-sub">A voice AI that sounds like you (or your best receptionist), answers every incoming call, qualifies the caller, books the appointment, and syncs to your calendar — <strong>24/7, never sick, never on lunch break</strong>. Built in 5 days.</p>
 <div class="hero-cta-row">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'voice-receptionist',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'voice-receptionist'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35)">📞 Try the Live Demo → (425) 437-8836</a>
-<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-ghost">Book a Strategy Call</a>
+<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-ghost">Book the 30-min consult</a>
 </div>
 <p class="hero-note" style="margin-top:16px">Call the number above <strong>right now</strong> — real AI receptionist, 24/7. Then <a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:underline">book a call</a> to build one for your business. $2,997 setup · $597/mo flat · 5-day delivery.</p>
 </section>
@@ -370,7 +379,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <li><span class="check">✓</span><span><strong>Unlimited support calls</strong> to tune, adapt, and evolve the system as your business grows</span></li>
 <li><span class="check">✓</span><span>Cancel anytime after month 3 — you keep everything</span></li>
 </ul>
-<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-primary" style="width:100%;text-align:center;font-size:1.05rem">Book a Free Strategy Call →</a>
+<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-primary" style="width:100%;text-align:center;font-size:1.05rem">Book the 30-min consult →</a>
 <p class="price-note">Not sure yet? The 30-min strategy call is free. We'll listen to a live demo of your voice AI on that call.</p>
 </div>
 </div>
@@ -406,6 +415,30 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div class="faq-item">
 <div class="faq-q">30-day guarantee — how does it work?</div>
 <div class="faq-a">If the AI doesn't book at least 20 qualified appointments in the first 30 days, we refund the setup fee in full. In practice, most clients see 60-100+ bookings in month 1 just from after-hours calls that used to go to voicemail.</div>
+</div>
+</div>
+</section>
+
+<!-- BREAK THE DEMO -->
+<section style="padding:80px 24px;background:var(--surface);border-top:1px solid var(--border)">
+<div style="max-width:820px;margin:0 auto">
+<div style="text-align:center;margin-bottom:34px">
+<div style="font-size:.75rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Don't take our word for it</div>
+<h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:14px">Call it right now.<br><span style="color:#22c55e">Try to break it.</span></h2>
+<p style="font-size:1rem;color:var(--muted);line-height:1.6">This is the actual product, not a recording. It's live 24/7 and it will book a real appointment on a real calendar. Don't be polite with it — here's exactly what we'd test:</p>
+</div>
+<div style="background:var(--bg);border:1px solid #22c55e;border-radius:16px;padding:30px">
+<div style="font-size:.95rem;color:var(--muted);line-height:2.1;margin-bottom:24px">
+<div>1. <strong style="color:var(--text)">Interrupt it mid-sentence.</strong> A bad bot talks over you. See how this one recovers.</div>
+<div>2. <strong style="color:var(--text)">Ask what it costs.</strong> Watch it handle a pricing question without dodging.</div>
+<div>3. <strong style="color:var(--text)">Ask for a human.</strong> See how it escalates instead of trapping you in a loop.</div>
+<div>4. <strong style="color:var(--text)">Actually book something.</strong> The appointment is real — you'll get the confirmation.</div>
+<div>5. <strong style="color:var(--text)">Ask something off-script.</strong> Find the edges. They exist, and we'll show you where they are on the consult.</div>
+</div>
+<div style="text-align:center">
+<a href="tel:+14254378836" class="btn-primary" style="display:inline-block;background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.3);font-size:1.05rem;padding:17px 36px">📞 Call (425) 437-8836</a>
+<p style="margin-top:14px;font-size:.86rem;color:var(--muted)">Free · 24/7 · No form, no salesperson, no follow-up sequence</p>
+</div>
 </div>
 </div>
 </section>
@@ -453,7 +486,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <p>Your competitors' phones roll to voicemail at 5 PM. Yours doesn't. Try the live demo, then book a call to build one for your business.</p>
 <div style="display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:16px">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'voice-receptionist',source:'final'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'voice-receptionist'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35);font-size:1.05rem;padding:18px 40px">📞 Call the Demo</a>
-<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book a Free Call →</a>
+<a href="https://cal.com/thatwasfast/30min?event=voice-receptionist" target="_blank" rel="noopener" class="btn-primary" style="font-size:1.05rem;padding:18px 40px">Book the 30-min consult →</a>
 </div>
 <p style="font-size:.85rem;color:var(--muted)">Demo line: (425) 437-8836 — call any time, 24/7</p>
 </section>
