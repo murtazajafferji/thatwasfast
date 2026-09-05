@@ -240,6 +240,20 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
   .promo-bar{font-size:.74rem;padding:8px 12px !important;line-height:1.35}
   .promo-bar .promo-long{display:none}
 }
+
+/* CTA BUTTONS — were wrapping to 2 lines on every phone width.
+   40px side padding + a 300px cap left ~220px for ~230px of text. */
+@media(max-width:600px){
+  .btn-primary,.btn-ghost{
+    padding-left:20px !important;padding-right:20px !important;
+    font-size:.95rem !important;
+    max-width:340px !important;width:100% !important;
+    white-space:nowrap;
+  }
+}
+@media(max-width:340px){
+  .btn-primary,.btn-ghost{font-size:.88rem !important;padding-left:14px !important;padding-right:14px !important}
+}
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/">
 <script type="application/ld+json">
@@ -356,7 +370,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <p class="hero-sub" style="margin-top:14px"><span style="text-decoration:line-through;color:var(--muted)">$4,997 setup + $997/mo</span> &nbsp;→&nbsp; <strong style="color:var(--text)">$2,997 setup per system + $597/mo flat</strong> (September, 40% off).<br><span style="font-size:.9rem">Monthly covers <strong style="color:var(--text)">unlimited support, tuning, and adjustments</strong> across every system we build with you. 30-day money-back.</span></p>
 <div class="hero-cta-row">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35);font-size:1.05rem;padding:18px 40px">📞 Call (425) 437-8836 — Hear It Now</a>
-<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',value:500,currency:'USD'});" class="btn-ghost">Book the consult — leave with a plan →</a>
+<a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',value:500,currency:'USD'});" class="btn-ghost">Book the 30-min consult →</a>
 </div>
 <p style="margin-top:20px;font-size:.85rem;color:var(--muted)">Free · No commitment · Real AI receptionist on the line, 24/7</p>
 </section>
@@ -577,7 +591,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </div>
 
 <div style="text-align:center;margin-top:26px">
-<a href="https://cal.com/thatwasfast/30min?event=calculator" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;font-size:1rem;padding:16px 34px">Bring these numbers to the consult →</a>
+<a href="https://cal.com/thatwasfast/30min?event=calculator" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;font-size:1rem;padding:16px 34px">Bring these to the consult →</a>
 </div>
 </div>
 </div>

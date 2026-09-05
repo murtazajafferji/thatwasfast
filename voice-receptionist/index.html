@@ -204,6 +204,20 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
   .promo-bar{font-size:.74rem;padding:8px 12px !important;line-height:1.35}
   .promo-bar .promo-long{display:none}
 }
+
+/* CTA BUTTONS — were wrapping to 2 lines on every phone width.
+   40px side padding + a 300px cap left ~220px for ~230px of text. */
+@media(max-width:600px){
+  .btn-primary,.btn-ghost{
+    padding-left:20px !important;padding-right:20px !important;
+    font-size:.95rem !important;
+    max-width:340px !important;width:100% !important;
+    white-space:nowrap;
+  }
+}
+@media(max-width:340px){
+  .btn-primary,.btn-ghost{font-size:.88rem !important;padding-left:14px !important;padding-right:14px !important}
+}
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/voice-receptionist/">
 <script type="application/ld+json">
