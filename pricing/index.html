@@ -178,6 +178,29 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
 @media(max-width:340px){
   .btn-primary,.btn-ghost{font-size:.82rem !important;padding-left:12px !important;padding-right:12px !important;letter-spacing:-.01em}
 }
+
+.cmp-wrap{max-width:980px;margin:0 auto;overflow-x:auto;-webkit-overflow-scrolling:touch}
+.cmp{width:100%;border-collapse:collapse;font-size:.9rem;min-width:640px}
+.cmp th,.cmp td{padding:13px 12px;border-bottom:1px solid var(--border);text-align:center}
+.cmp thead th{position:sticky;top:0;background:var(--surface);z-index:2}
+.cmp tbody th{text-align:left;font-weight:600;color:var(--text);width:38%;font-size:.88rem}
+.cmp .tier-h{font-weight:800;font-size:.98rem;line-height:1.3}
+.cmp .tier-p{font-size:.78rem;color:var(--muted);font-weight:600;margin-top:3px}
+.cmp col.feat-col{background:rgba(168,85,247,.07)}
+.cmp .yes{color:#22c55e;font-weight:800;font-size:1.05rem}
+.cmp .no{color:#52525b;font-weight:700;font-size:1.05rem}
+.cmp .val{font-size:.82rem;font-weight:700;color:var(--text)}
+.cmp tbody tr:hover{background:rgba(255,255,255,.02)}
+.cmp .grp td{padding:18px 12px 7px;text-align:left;font-size:.7rem;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;color:var(--muted);border-bottom:none}
+@media(max-width:640px){
+  .cmp{font-size:.82rem}
+  .cmp th,.cmp td{padding:10px 8px}
+  .cmp tbody th{width:34%;font-size:.8rem}
+  .cmp-hint{display:block!important}
+}
+.cmp-hint{display:none;text-align:center;font-size:.78rem;color:var(--muted);margin-bottom:10px}
+
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
@@ -297,6 +320,56 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 </div>
 <p style="text-align:center;margin-top:30px;font-size:.95rem;color:var(--muted)">Every level includes the same free consult and the same written plan. <strong style="color:var(--text)">You never get quoted before you get advice.</strong></p>
+</div>
+</section>
+
+<!-- COMPARISON MATRIX -->
+<section style="background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border)">
+<div class="inner">
+<h2 style="text-align:center">Three levels.<br><span>Same two people.</span></h2>
+<p style="text-align:center;color:var(--muted);max-width:640px;margin:0 auto 30px;font-size:.98rem">Every column starts with the same free call and the same written scope. The only difference is how much of it you want on your plate.</p>
+<div class="cmp-hint">Swipe to compare &rarr;</div>
+<div class="cmp-wrap">
+<table class="cmp">
+<colgroup><col><col><col class="feat-col"><col></colgroup>
+<thead>
+<tr>
+<th></th>
+<th><div class="tier-h">Blueprint</div><div class="tier-p">You build it</div></th>
+<th><div class="tier-h" style="color:var(--gold)">Done-For-You</div><div class="tier-p" style="color:var(--gold)">Most start here</div></th>
+<th><div class="tier-h" style="color:var(--green)">Growth Partner</div><div class="tier-p" style="color:var(--green)">We run it with you</div></th>
+</tr>
+</thead>
+<tbody>
+<tr class="grp"><td colspan="4">What it costs</td></tr>
+<tr><th scope="row">Up-front</th><td class="val">$497</td><td class="val">$2,997</td><td class="val">From $0</td></tr>
+<tr><th scope="row">Monthly</th><td class="val">$197 optional</td><td class="val">$597 flat</td><td class="val">From $1,997</td></tr>
+<tr><th scope="row">Money-back guarantee</th><td class="no">&#10007;</td><td class="val">30 days</td><td class="val">30 days</td></tr>
+<tr class="grp"><td colspan="4">Who does the work</td></tr>
+<tr><th scope="row">We build it for you</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Live in 5 business days</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Your time to launch</th><td class="val">You set the pace</td><td class="val">90 minutes</td><td class="val">90 minutes</td></tr>
+<tr class="grp"><td colspan="4">What you get</td></tr>
+<tr><th scope="row">The full build playbook</th><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Production prompts &amp; templates</th><td class="yes">&#10003;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Connected to phone, CRM, calendar</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Trained on your pricing &amp; FAQs</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Unlimited support calls</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Ongoing tuning from real calls</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr class="grp"><td colspan="4">As you grow</td></tr>
+<tr><th scope="row">Add systems, monthly never changes</th><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">New systems included quarterly</th><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Priority build queue</th><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Quarterly roadmap session</th><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Team training</th><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Multi-location rollout</th><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+<tr><th scope="row">Direct line to both of us</th><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+</tbody>
+</table>
+</div>
+<div style="text-align:center;margin-top:28px">
+<a href="https://cal.com/thatwasfast/30min?event=pricing-compare" target="_blank" rel="noopener" class="btn-primary">Book the free consult &rarr;</a>
+</div>
 </div>
 </section>
 
