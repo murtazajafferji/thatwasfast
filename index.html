@@ -243,6 +243,7 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
 
 /* CTA BUTTONS — were wrapping to 2 lines on every phone width.
    40px side padding + a 300px cap left ~220px for ~230px of text. */
+.btn-primary,.btn-ghost{white-space:nowrap}
 @media(max-width:600px){
   .btn-primary,.btn-ghost{
     padding-left:20px !important;padding-right:20px !important;
@@ -252,7 +253,7 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
   }
 }
 @media(max-width:340px){
-  .btn-primary,.btn-ghost{font-size:.88rem !important;padding-left:14px !important;padding-right:14px !important}
+  .btn-primary,.btn-ghost{font-size:.8rem !important;padding-left:10px !important;padding-right:10px !important;letter-spacing:-.01em}
 }
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/">
@@ -288,6 +289,7 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
         {"@type":"Question","name":"Can I bundle multiple systems?","acceptedAnswer":{"@type":"Answer","text":"Yes. Setup fee is per system built ($2,997 in September). The monthly retainer is flat at $597/mo total, no matter how many systems we build for you."}},
         {"@type":"Question","name":"Will this replace my receptionist or my team?","acceptedAnswer":{"@type":"Answer","text":"No. It replaces voicemail, hold music, and the follow-up nobody has time for. Your AI support takes care of the mindless so your team can be more mindful — the conversations, judgment calls, and relationships that need a human. Most clients don't cut staff; they stop needing the next hire just to keep up."}},
         {"@type":"Question","name":"What if I'd rather build it myself?","acceptedAnswer":{"@type":"Answer","text":"Take the DIY Blueprint — $497 for the exact playbook, templates, prompts, and tool setup we use, plus optional coaching at $197/mo. If you decide you'd rather we build it, the full $497 is credited toward your build."}},
+        {"@type":"Question","name":"What if I'm not ready for a monthly system?","acceptedAnswer":{"@type":"Answer","text":"Run a Lead Revival campaign instead. It's $1,997 one-time with no monthly and no contract: we text every old lead and past customer already in your CRM, have real conversations, and book the ones who are ready. You get a full report of what it produced, and the entire $1,997 credits toward a system build within 60 days."}},
         {"@type":"Question","name":"Do you pay for referrals?","acceptedAnswer":{"@type":"Answer","text":"Yes. $500 for your first referral that goes live, $750 for the second, and $1,000 for every one after that, with no cap. Take it as credit against your monthly or as cash. The business you refer gets $500 off their setup."}},
         {"@type":"Question","name":"How much of my time does this take?","acceptedAnswer":{"@type":"Answer","text":"About 90 minutes total: a 30-minute consult, a 45-minute onboarding call, and a 15-minute review before go-live. Everything else is on us."}},
         {"@type":"Question","name":"What if I want a refund?","acceptedAnswer":{"@type":"Answer","text":"If you're not seeing measurable results in the first 30 days, we refund the setup fee. No hoops, no fine print."}}
@@ -389,7 +391,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div style="max-width:var(--max);margin:0 auto">
 <h2 style="text-align:center;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:900;line-height:1.2;margin-bottom:10px">Which leak is costing you<br>the most right now?</h2>
 <p style="text-align:center;color:var(--muted);font-size:1rem;margin-bottom:34px">Pick the one that stings. We'll show you the fix and what it's worth.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:14px" class="leak-grid">
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px" class="leak-grid">
 <a href="/voice-receptionist/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid #22c55e;border-radius:14px;padding:24px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='#22c55e'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)';this.style.borderLeftColor='#22c55e'">
 <div style="font-size:1.5rem;margin-bottom:10px">📞</div>
 <div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We're missing calls."</div>
@@ -407,6 +409,12 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"Proposals go out days late."</div>
 <div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Written at 9pm after the real work. By the time it lands, the client has cooled off or already signed elsewhere.</div>
 <div style="font-size:.85rem;font-weight:700;color:var(--gold)">Fix it with same-day proposals →</div>
+</a>
+<a href="/lead-revival/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid #22c55e;border-radius:14px;padding:24px;transition:transform .15s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="font-size:1.5rem;margin-bottom:10px">🔁</div>
+<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We just need more work coming in."</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Before you buy another lead — the people who already asked for your price are sitting in your CRM, unworked.</div>
+<div style="font-size:.85rem;font-weight:700;color:#22c55e">Fix it with a Lead Revival campaign →</div>
 </a>
 </div>
 <p style="text-align:center;margin-top:24px;font-size:.94rem;color:var(--muted)">More than one? That's normal — <a href="#calc" style="color:var(--gold);font-weight:700">run the numbers below</a> and we'll sequence them on the consult.</p>
@@ -647,9 +655,9 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 
 <section class="services" id="services">
 <div class="services-inner">
-<h2 style="text-align:center;margin-bottom:12px">Start with one system<br><span style="color:var(--gold)">that goes live in 5 business days.</span></h2>
-<p style="text-align:center;color:var(--muted);font-size:1.05rem;max-width:640px;margin:0 auto 48px">These three ship this week. Then we keep going — automating whatever else drains your time so you can focus on what you're actually great at. Every system is full production, tailored to your workflow, integrated with your tools (CRM, calendar, phone, email). Try the voice demo before you even book a call.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px" class="featured-offers">
+<h2 style="text-align:center;margin-bottom:12px">Start with one thing.<br><span style="color:var(--gold)">Add the rest when you're ready.</span></h2>
+<p style="text-align:center;color:var(--muted);font-size:1.05rem;max-width:660px;margin:0 auto 48px">Three systems that go live in 5 business days — plus a one-time campaign that turns the leads you already own into booked jobs. Everything is full production, tailored to your workflow, integrated with your tools (CRM, calendar, phone, email). Try the voice demo before you even book a call.</p>
+<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px" class="featured-offers">
 
 <a href="/voice-receptionist/" style="display:block;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(22,163,74,.04));border:1px solid #22c55e;border-radius:16px;padding:28px;transition:transform .15s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
 <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
@@ -675,6 +683,17 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <h3 style="font-size:1.2rem;font-weight:800;margin-bottom:8px">Auto-Proposal Writer</h3>
 <p style="font-size:.9rem;color:var(--muted);line-height:1.5;margin-bottom:12px">You take the discovery call. The AI listens, drafts a polished proposal in your voice, and sends it to the client before you finish coffee.</p>
 <p style="font-size:.82rem;color:var(--muted);margin-bottom:14px"><strong style="color:var(--text)">3-4×</strong> higher close rate on same-day proposals</p>
+<div style="font-size:.85rem;font-weight:700;color:var(--gold)">See details →</div>
+</a>
+
+<a href="/lead-revival/" style="display:block;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(22,163,74,.04));border:1px solid #22c55e;border-radius:16px;padding:28px;transition:transform .15s" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+<div style="font-size:.7rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase">Cheapest Way To Start</div>
+<div style="font-size:.65rem;font-weight:800;color:#22c55e;letter-spacing:.08em;text-transform:uppercase;background:rgba(34,197,94,.15);padding:3px 8px;border-radius:6px">NO MONTHLY</div>
+</div>
+<h3 style="font-size:1.2rem;font-weight:800;margin-bottom:8px">Lead Revival</h3>
+<p style="font-size:.9rem;color:var(--muted);line-height:1.5;margin-bottom:12px">A one-time campaign that texts every old lead and past customer in your CRM, has the conversation, and books the ones who are ready.</p>
+<p style="font-size:.82rem;color:var(--muted);margin-bottom:14px"><strong style="color:var(--text)">$1,997</strong> one-time — credited toward any build</p>
 <div style="font-size:.85rem;font-weight:700;color:var(--gold)">See details →</div>
 </a>
 
@@ -928,6 +947,10 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
 <summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What if I'd rather build it myself?</summary>
 <p style="margin-top:12px;color:var(--muted);line-height:1.6">Then take the DIY Blueprint — $497 for the exact playbook, templates, prompts, and tool setup we use, plus optional monthly coaching at $197/mo so you're never stuck. If you get halfway and decide you'd rather we just do it, <strong style="color:var(--text)">the full $497 is credited toward your build.</strong> See <a href="/pricing/" style="color:var(--gold);font-weight:600">all three levels →</a></p>
+</details>
+<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
+<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What if I'm not ready for a monthly system?</summary>
+<p style="margin-top:12px;color:var(--muted);line-height:1.6">Run a <a href="/lead-revival/" style="color:var(--gold);font-weight:600">Lead Revival</a> campaign instead — <strong style="color:var(--text)">$1,997 one-time, no monthly, no contract.</strong> We text every old lead and past customer already sitting in your CRM, have the actual conversations, and book the ones who are ready. You get a full report of exactly what it produced, and the entire $1,997 credits toward a system build if you decide to go further within 60 days. It's the cheapest way to find out whether this works in your business before committing to anything.</p>
 </details>
 <details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
 <summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">Do you pay for referrals?</summary>

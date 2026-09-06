@@ -207,6 +207,7 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
 
 /* CTA BUTTONS — were wrapping to 2 lines on every phone width.
    40px side padding + a 300px cap left ~220px for ~230px of text. */
+.btn-primary,.btn-ghost{white-space:nowrap}
 @media(max-width:600px){
   .btn-primary,.btn-ghost{
     padding-left:20px !important;padding-right:20px !important;
@@ -216,7 +217,7 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
   }
 }
 @media(max-width:340px){
-  .btn-primary,.btn-ghost{font-size:.88rem !important;padding-left:14px !important;padding-right:14px !important}
+  .btn-primary,.btn-ghost{font-size:.8rem !important;padding-left:10px !important;padding-right:10px !important;letter-spacing:-.01em}
 }
 </style>
 <link rel="canonical" href="https://thatwasfast.ai/auto-proposal/">
@@ -277,6 +278,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <div style="display:flex;gap:8px;align-items:center">
 <span class="nav-secondary" style="gap:6px"><a href="/voice-receptionist/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Voice</a>
 <a href="/lead-response/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Lead Response</a>
+<a href="/lead-revival/" style="padding:6px 10px;font-size:.78rem;color:var(--muted);text-decoration:none;font-weight:600">Lead Revival</a>
 <a href="/auto-proposal/" style="padding:6px 10px;font-size:.78rem;color:var(--gold);text-decoration:none;font-weight:600">Proposals</a>
 <a href="/#how" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">How it works</a><a href="/pricing/" style="padding:8px 10px;font-size:.78rem;font-weight:600;color:var(--muted)">Pricing</a></span>
 <a href="tel:+14254378836" class="nav-phone" aria-label="Call the live AI demo at (425) 437-8836" onclick="if(window.gtag)gtag('event','demo_call',{page:'auto-proposal',source:'nav'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'auto-proposal'});" style="padding:8px 12px;background:transparent;border:1px solid var(--border);color:var(--text);font-weight:600;font-size:.78rem;border-radius:8px;white-space:nowrap">📞<span class="nav-phone-label"> Live Demo</span></a>
