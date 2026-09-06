@@ -270,29 +270,67 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
       "telephone": "+1-425-437-8836",
       "description": "AI systems that answer calls, respond to leads, and write proposals for service businesses. Live in 5 days.",
       "founder": [
-        {"@type":"Person","name":"Taza"},
-        {"@type":"Person","name":"Jeremy"}
+        {
+          "@type": "Person",
+          "name": "Taza"
+        },
+        {
+          "@type": "Person",
+          "name": "Jeremy"
+        }
       ]
     },
     {
       "@type": "WebSite",
       "url": "https://thatwasfast.ai/",
       "name": "That Was Fast",
-      "publisher": {"@id":"https://thatwasfast.ai/#org"}
+      "publisher": {
+        "@id": "https://thatwasfast.ai/#org"
+      }
     },
     {
       "@type": "FAQPage",
       "mainEntity": [
-        {"@type":"Question","name":"What if AI doesn't work for my industry?","acceptedAnswer":{"@type":"Answer","text":"Our systems are built on the same tech that powers ChatGPT and the biggest AI voice platforms. If your business takes calls, replies to leads, or writes proposals, it works. We've built for HVAC, dental, plumbing, salons, med spas, law firms, and consulting."}},
-        {"@type":"Question","name":"Do I need to know anything about AI?","acceptedAnswer":{"@type":"Answer","text":"Zero. We handle every technical piece — model selection, prompts, integrations, deployment, monitoring. You get a working system that ships in 5 business days."}},
-        {"@type":"Question","name":"How is this different from Smith.ai or Ruby?","acceptedAnswer":{"@type":"Answer","text":"Smith.ai and Ruby charge $300-$2,100/mo for bundled minutes and route through their system. We build a custom AI on your phone number — flat $597/mo, no per-minute overage, no shared infrastructure. You own the system."}},
-        {"@type":"Question","name":"Can I bundle multiple systems?","acceptedAnswer":{"@type":"Answer","text":"Yes. Setup fee is per system built ($2,997 in September). The monthly retainer is flat at $597/mo total, no matter how many systems we build for you."}},
-        {"@type":"Question","name":"Will this replace my receptionist or my team?","acceptedAnswer":{"@type":"Answer","text":"No. It replaces voicemail, hold music, and the follow-up nobody has time for. Your AI support takes care of the mindless so your team can be more mindful — the conversations, judgment calls, and relationships that need a human. Most clients don't cut staff; they stop needing the next hire just to keep up."}},
-        {"@type":"Question","name":"What if I'd rather build it myself?","acceptedAnswer":{"@type":"Answer","text":"Take the DIY Blueprint — $497 for the exact playbook, templates, prompts, and tool setup we use, plus optional coaching at $197/mo. If you decide you'd rather we build it, the full $497 is credited toward your build."}},
-        {"@type":"Question","name":"What if I'm not ready for a monthly system?","acceptedAnswer":{"@type":"Answer","text":"Run a Lead Revival campaign instead. It's $1,997 one-time with no monthly and no contract: we text every old lead and past customer already in your CRM, have real conversations, and book the ones who are ready. You get a full report of what it produced, and the entire $1,997 credits toward a system build within 60 days."}},
-        {"@type":"Question","name":"Do you pay for referrals?","acceptedAnswer":{"@type":"Answer","text":"Yes. $500 for your first referral that goes live, $750 for the second, and $1,000 for every one after that, with no cap. Take it as credit against your monthly or as cash. The business you refer gets $500 off their setup."}},
-        {"@type":"Question","name":"How much of my time does this take?","acceptedAnswer":{"@type":"Answer","text":"About 90 minutes total: a 30-minute consult, a 45-minute onboarding call, and a 15-minute review before go-live. Everything else is on us."}},
-        {"@type":"Question","name":"What if I want a refund?","acceptedAnswer":{"@type":"Answer","text":"If you're not seeing measurable results in the first 30 days, we refund the setup fee. No hoops, no fine print."}}
+        {
+          "@type": "Question",
+          "name": "What if AI doesn't work for my industry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our systems are built on the same tech that powers ChatGPT and the biggest AI voice platforms. If your business takes calls, replies to leads, or writes proposals, it works. We've built for HVAC, dental, plumbing, salons, med spas, law firms, and consulting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to know anything about AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Zero. We handle every technical piece — model selection, prompts, integrations, deployment, monitoring. You get a working system that ships in 5 business days."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will this replace my receptionist or my team?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. It replaces voicemail, hold music, and the follow-up nobody has time for. Your AI support takes care of the mindless so your team can be more mindful — the conversations, judgment calls, and relationships that need a human. Most clients don't cut staff; they stop needing the next hire just to keep up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much of my time does this actually take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "About 90 minutes total: a 30-minute consult, a 45-minute onboarding call, and a 15-minute review before it goes live. Everything else is on us — the building, the connecting, the testing, the tuning. That's deliberate. If changing were hard, nobody would do it."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What if I want a refund?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "If you're not seeing measurable results in the first 30 days, we refund the setup fee. No hoops, no fine print."
+          }
+        }
       ]
     }
   ]
@@ -332,6 +370,11 @@ nav .nav-cta{padding:9px 16px;font-size:.8rem}
   }, true);
 })();
 </script>
+<style>
+@media(max-width:1000px){.mult-grid{grid-template-columns:repeat(3,1fr) !important}.how-grid{grid-template-columns:repeat(2,1fr) !important}}
+@media(max-width:720px){.mult-grid{grid-template-columns:repeat(2,1fr) !important}}
+@media(max-width:560px){.mult-grid{grid-template-columns:1fr !important}.how-grid{grid-template-columns:1fr !important}}
+</style>
 </head>
 <body>
 
@@ -366,15 +409,45 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </nav>
 
 <section class="hero">
-<h1>Where does your business<br>even start with AI?<br><a href="#services" style="text-decoration:none" onclick="if(window.gtag)gtag('event','hero_right_here_click',{page:'home'})"><span style="cursor:pointer">Right here.</span></a></h1>
-<p class="hero-sub" style="font-weight:600;color:var(--text);margin-top:20px">We build the AI systems that answer your calls, reply to your leads, and get your proposals out the same day — live in 5 business days, on the tools you already use.</p>
+<h1>There's only one of you.<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Until there isn't.</span></h1>
+<p class="hero-sub" style="font-weight:600;color:var(--text);margin-top:20px;font-size:1.15rem">We train AI assistants to work like you, for you — answering every call, replying to every lead, and getting proposals out the same day. Live in 5 business days.</p>
 <p class="hero-sub" style="margin-top:14px">Your AI support takes care of the mindless, so you can be more mindful — with your customers, your team, and the work only you can do.</p>
-<p class="hero-sub" style="margin-top:14px"><span style="text-decoration:line-through;color:var(--muted)">$4,997 setup + $997/mo</span> &nbsp;→&nbsp; <strong style="color:var(--text)">$2,997 setup per system + $597/mo flat</strong> (September, 40% off).<br><span style="font-size:.9rem">Monthly covers <strong style="color:var(--text)">unlimited support, tuning, and adjustments</strong> across every system we build with you. 30-day money-back.</span></p>
 <div class="hero-cta-row">
 <a href="tel:+14254378836" onclick="if(window.gtag)gtag('event','demo_call',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Contact',{content_name:'Demo Call',content_category:'home'});" class="btn-primary" style="background:linear-gradient(135deg,#22c55e,#16a34a);box-shadow:0 12px 40px rgba(34,197,94,.35);font-size:1.05rem;padding:18px 40px">📞 Call (425) 437-8836 — Hear It Now</a>
 <a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" onclick="if(window.gtag)gtag('event','book_call_click',{page:'home',source:'hero'});if(window.twfCapiSend)twfCapiSend('Lead',{content_name:'Book a Call',content_category:'home',value:500,currency:'USD'});" class="btn-ghost">Book the 30-min consult →</a>
 </div>
-<p style="margin-top:20px;font-size:.85rem;color:var(--muted)">Free · No commitment · Real AI receptionist on the line, 24/7</p>
+<p style="margin-top:20px;font-size:.85rem;color:var(--muted)">That number is answered by AI. Try to break it. · Free · No commitment</p>
+</section>
+
+<!-- MULTIPLICATION -->
+<section style="padding:74px 24px;border-top:1px solid var(--border);background:linear-gradient(180deg,var(--bg),var(--surface))">
+<div style="max-width:var(--max);margin:0 auto">
+<h2 style="text-align:center;font-size:clamp(1.6rem,3.4vw,2.3rem);font-weight:900;line-height:1.2;margin-bottom:12px">Your business is capped<br>by one number: <span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">your hours.</span></h2>
+<p style="text-align:center;color:var(--muted);font-size:1.02rem;max-width:660px;margin:0 auto 40px;line-height:1.65">You can work harder. You can hire — slowly, expensively, and hope they stick. Or you can put the repeatable parts of your job into systems that run at ten times your capacity, without you.</p>
+<div style="display:grid;grid-template-columns:repeat(5,1fr);gap:12px" class="mult-grid">
+<div style="background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:14px;padding:22px 18px;text-align:center">
+<div style="font-size:1.6rem;font-weight:900;color:var(--gold);margin-bottom:8px">TIME</div>
+<div style="font-size:.88rem;color:var(--muted);line-height:1.5">The hours you spend on calls, follow-ups, and paperwork come back to you.</div>
+</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:14px;padding:22px 18px;text-align:center">
+<div style="font-size:1.6rem;font-weight:900;color:var(--gold);margin-bottom:8px">EFFORT</div>
+<div style="font-size:.88rem;color:var(--muted);line-height:1.5">Built once, it runs every day after — nights, weekends, holidays.</div>
+</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:14px;padding:22px 18px;text-align:center">
+<div style="font-size:1.6rem;font-weight:900;color:var(--gold);margin-bottom:8px">SPEED</div>
+<div style="font-size:.88rem;color:var(--muted);line-height:1.5">Every lead answered in seconds instead of hours. First to reply usually wins.</div>
+</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-top:3px solid var(--gold);border-radius:14px;padding:22px 18px;text-align:center">
+<div style="font-size:1.6rem;font-weight:900;color:var(--gold);margin-bottom:8px">REACH</div>
+<div style="font-size:.88rem;color:var(--muted);line-height:1.5">Thousands of conversations at once. You couldn't dial that many in a year.</div>
+</div>
+<div style="background:linear-gradient(135deg,rgba(168,85,247,.16),rgba(192,132,252,.05));border:1px solid var(--gold);border-radius:14px;padding:22px 18px;text-align:center">
+<div style="font-size:1.6rem;font-weight:900;color:var(--gold2);margin-bottom:8px">IMPACT</div>
+<div style="font-size:.88rem;color:var(--text);line-height:1.5">More customers served, better — which is why you started this.</div>
+</div>
+</div>
+<p style="text-align:center;margin-top:34px;font-size:1.05rem;color:var(--text);font-weight:600">One of you is a ceiling. Ten of you is a business.</p>
+</div>
 </section>
 
 <section class="stats">
@@ -386,40 +459,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </div>
 </section>
 
-<!-- LEAK ROUTER -->
-<section style="padding:70px 24px;border-top:1px solid var(--border)">
-<div style="max-width:var(--max);margin:0 auto">
-<h2 style="text-align:center;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:900;line-height:1.2;margin-bottom:10px">Which leak is costing you<br>the most right now?</h2>
-<p style="text-align:center;color:var(--muted);font-size:1rem;margin-bottom:34px">Pick the one that stings. We'll show you the fix and what it's worth.</p>
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:14px" class="leak-grid">
-<a href="/voice-receptionist/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid #22c55e;border-radius:14px;padding:24px;transition:transform .15s,border-color .2s" onmouseover="this.style.transform='translateY(-3px)';this.style.borderColor='#22c55e'" onmouseout="this.style.transform='translateY(0)';this.style.borderColor='var(--border)';this.style.borderLeftColor='#22c55e'">
-<div style="font-size:1.5rem;margin-bottom:10px">📞</div>
-<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We're missing calls."</div>
-<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Ringing while you're on a job, after hours, on weekends. Most callers don't leave a voicemail — they call the next business.</div>
-<div style="font-size:.85rem;font-weight:700;color:#22c55e">Fix it with an AI receptionist →</div>
-</a>
-<a href="/lead-response/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:24px;transition:transform .15s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-<div style="font-size:1.5rem;margin-bottom:10px">⏱️</div>
-<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We reply to leads too slow."</div>
-<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Form fills and DMs sitting for hours. Replying in 5 minutes instead of 30 makes a lead 21× more likely to convert.</div>
-<div style="font-size:.85rem;font-weight:700;color:var(--gold)">Fix it with AI lead response →</div>
-</a>
-<a href="/auto-proposal/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:24px;transition:transform .15s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-<div style="font-size:1.5rem;margin-bottom:10px">📄</div>
-<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"Proposals go out days late."</div>
-<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Written at 9pm after the real work. By the time it lands, the client has cooled off or already signed elsewhere.</div>
-<div style="font-size:.85rem;font-weight:700;color:var(--gold)">Fix it with same-day proposals →</div>
-</a>
-<a href="/lead-revival/" style="display:block;background:var(--surface);border:1px solid var(--border);border-left:3px solid #22c55e;border-radius:14px;padding:24px;transition:transform .15s" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-<div style="font-size:1.5rem;margin-bottom:10px">🔁</div>
-<div style="font-weight:800;font-size:1.05rem;margin-bottom:6px">"We just need more work coming in."</div>
-<div style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:12px">Before you buy another lead — the people who already asked for your price are sitting in your CRM, unworked.</div>
-<div style="font-size:.85rem;font-weight:700;color:#22c55e">Fix it with a Lead Revival campaign →</div>
-</a>
-</div>
-<p style="text-align:center;margin-top:24px;font-size:.94rem;color:var(--muted)">More than one? That's normal — <a href="#calc" style="color:var(--gold);font-weight:700">run the numbers below</a> and we'll sequence them on the consult.</p>
-</div>
-</section>
+
 <style>@media(max-width:800px){.leak-grid{grid-template-columns:1fr !important}}</style>
 
 <!-- PAIN OF STAYING THE SAME -->
@@ -458,100 +498,35 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </section>
 <style>@media(max-width:700px){.pain-grid{grid-template-columns:1fr !important}}</style>
 
-<!-- FEAR REMOVAL -->
-<section style="padding:80px 24px;background:var(--surface)">
-<div style="max-width:var(--max);margin:0 auto;text-align:center">
-<h2 style="font-size:clamp(1.7rem,3.6vw,2.4rem);font-weight:900;line-height:1.15;margin-bottom:14px">The hard part isn't AI.<br><span style="color:var(--gold)">It's change. We remove that part.</span></h2>
-<p style="color:var(--muted);font-size:1rem;margin-bottom:40px">The pain of change should be close to zero. Here's how we get it there.</p>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;text-align:left" class="fear-grid">
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"It'll sound like a robot."</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">Call <a href="tel:+14254378836" style="color:#22c55e;font-weight:700">(425) 437-8836</a> right now and judge for yourself. No form, no demo request, no salesperson. That's the actual product.</div></div>
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"I'm not technical enough."</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">You don't touch anything. We build, connect, test, and launch it. You get one call to review it and a number to text when you want a change.</div></div>
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"It'll disrupt how we work."</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">It plugs into your existing phone, CRM, calendar, and email. Nothing gets ripped out. Your team's day looks the same — minus the parts they hate.</div></div>
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"It'll take months."</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">Five business days from kickoff to live. You spend about 90 minutes total: one consult, one onboarding call, one review.</div></div>
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"What if it doesn't work?"</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">30-day money-back guarantee on the setup fee. No hoops, no fine print. And you can cancel the monthly after month 3 — the system stays yours.</div></div>
-<div style="background:var(--bg);border:1px solid var(--border);border-radius:14px;padding:24px"><div style="font-size:.82rem;color:#ef4444;font-weight:700;margin-bottom:8px">"It'll replace my people."</div><div style="font-size:.92rem;color:var(--muted);line-height:1.55">It replaces voicemail, not humans. Your team stops chasing and starts closing. Nobody we've built for has cut staff — they've stopped needing the next hire to grow.</div></div>
-</div>
-</div>
-</section>
+
 <style>@media(max-width:900px){.fear-grid{grid-template-columns:1fr !important}}</style>
 
 <!-- STEP BY STEP PROCESS -->
-<section id="how" style="padding:100px 24px">
+<section id="how" style="padding:72px 24px;border-top:1px solid var(--border)">
 <div style="max-width:var(--max);margin:0 auto">
-<div style="text-align:center;margin-bottom:52px">
-<div style="font-size:.75rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">The step-by-step</div>
-<h2 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:16px">No mystery. Here's exactly<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">what happens next.</span></h2>
-<p style="font-size:1.05rem;color:var(--muted);max-width:660px;margin:0 auto">From the first call to a live system to whatever we automate next. About 90 minutes of your time, total.</p>
+<h2 style="text-align:center;font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:900;line-height:1.2;margin-bottom:10px">Live in 5 business days.<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">90 minutes of your time.</span></h2>
+<p style="text-align:center;color:var(--muted);font-size:1rem;margin-bottom:38px">No discovery month. No scope creep. No surprise invoice.</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px" class="how-grid">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px">
+<div style="font-size:.72rem;font-weight:800;color:var(--gold);letter-spacing:.1em;margin-bottom:8px">STEP 01 · 30 MIN</div>
+<div style="font-weight:800;font-size:1.02rem;margin-bottom:6px">The consult</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55">We find where the money is leaking. You leave with a fixed scope and price in writing within 24 hours — whether you hire us or not.</div>
 </div>
-<div style="display:flex;flex-direction:column;gap:14px">
-
-<div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">01</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Free Ops Leak Analysis — 30 minutes</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">We map where your time and money leak: missed calls, slow lead follow-up, proposals, admin. You leave with a written recommendation and the numbers behind it — whether or not you hire us. No pitch deck, no pressure.</p>
-<div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Your time: 30 min</div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px">
+<div style="font-size:.72rem;font-weight:800;color:var(--gold);letter-spacing:.1em;margin-bottom:8px">STEP 02 · 45 MIN</div>
+<div style="font-weight:800;font-size:1.02rem;margin-bottom:6px">Onboarding</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55">Jeremy collects your details, tools, and how you talk to customers. Then you go back to work.</div>
 </div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:24px">
+<div style="font-size:.72rem;font-weight:800;color:var(--gold);letter-spacing:.1em;margin-bottom:8px">STEP 03 · 0 MIN</div>
+<div style="font-weight:800;font-size:1.02rem;margin-bottom:6px">We build it</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55">Built, connected to your CRM, calendar and phone, and tested against real scenarios. Nothing needed from you.</div>
 </div>
-
-<div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">02</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Your plan, in writing</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">Within 24 hours you get a one-page plan: which system goes first, what it connects to, what it costs, what it should return, and the date it goes live. Fixed scope, fixed price. Nothing starts until you say go.</p>
-<div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Your time: 0 — we do this part</div>
+<div style="background:linear-gradient(135deg,rgba(34,197,94,.14),rgba(22,163,74,.04));border:1px solid var(--green);border-radius:14px;padding:24px">
+<div style="font-size:.72rem;font-weight:800;color:var(--green);letter-spacing:.1em;margin-bottom:8px">STEP 04 · 15 MIN</div>
+<div style="font-weight:800;font-size:1.02rem;margin-bottom:6px">You approve. It goes live.</div>
+<div style="font-size:.9rem;color:var(--muted);line-height:1.55">You listen to it, tell us what to change, we change it. Then it starts working. 30-day money-back.</div>
 </div>
-</div>
-
-<div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">03</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Pick your depth: DIY, Done-For-You, or Partner</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">Not every business needs the same help. Some want the blueprint and a coach. Most want it built and handed over. Some want us running it as part of the team. Same process, three depths — <a href="/pricing/" style="color:var(--gold);font-weight:700">see all three →</a></p>
-<div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Your time: one decision</div>
-</div>
-</div>
-
-<div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">04</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Onboarding call — 45 minutes</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">Jeremy walks you through it. We collect your voice, your services, your pricing, your FAQs, and connect your phone, CRM, calendar, and email. You talk, we take notes. That's the last heavy lift on your side.</p>
-<div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Your time: 45 min</div>
-</div>
-</div>
-
-<div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">05</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">We build it — 5 business days</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">Taza builds and tests the system against real scenarios from your business. You get progress updates, not silence. Nothing goes live until you've heard it and approved it.</p>
-<div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Your time: 0</div>
-</div>
-</div>
-
-<div style="display:flex;gap:20px;background:var(--surface);border:1px solid var(--border);border-left:3px solid #22c55e;border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:#22c55e;min-width:52px">06</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">Go live + 30-day proof window</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">The system switches on. We watch the first two weeks closely and tune from real calls and real leads. If you're not seeing measurable results in 30 days, we refund the setup fee.</p>
-<div style="font-size:.82rem;color:#22c55e;font-weight:700;margin-top:10px">Your time: 15 min review call</div>
-</div>
-</div>
-
-<div style="display:flex;gap:20px;background:linear-gradient(135deg,rgba(168,85,247,.1),rgba(34,197,94,.05));border:1px solid var(--gold);border-radius:14px;padding:26px" class="step-row">
-<div style="font-size:1.6rem;font-weight:900;color:var(--gold);min-width:52px">07</div>
-<div>
-<div style="font-weight:800;font-size:1.1rem;margin-bottom:6px">We keep going</div>
-<p style="font-size:.95rem;color:var(--muted);line-height:1.6">Monthly check-ins, unlimited support calls, and the next thing we automate together — inbox triage, quote generation, dispatch, review requests, whatever's draining you next. Setup fee per new system. <strong style="color:var(--text)">The monthly never changes.</strong></p>
-<div style="font-size:.82rem;color:var(--gold);font-weight:700;margin-top:10px">Ongoing, as long as it's working</div>
-</div>
-</div>
-
-</div>
-<div style="text-align:center;margin-top:44px">
-<a href="https://cal.com/thatwasfast/30min?event=ops-leak-analysis" target="_blank" rel="noopener" class="btn-primary" style="display:inline-block;font-size:1.02rem;padding:17px 38px">Get your free Ops Leak Analysis →</a>
-<p style="margin-top:14px;font-size:.88rem;color:var(--muted)">Free. 30 minutes. You leave with a plan either way.</p>
 </div>
 </div>
 </section>
@@ -707,109 +682,26 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 </div>
 </section>
 
-<section style="padding:80px 24px;background:linear-gradient(180deg,var(--bg),var(--surface))">
+<section style="padding:70px 24px;border-top:1px solid var(--border)">
 <div style="max-width:900px;margin:0 auto;text-align:center">
-<h2 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:16px">More than three systems.<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">A partner for the whole shift.</span></h2>
-<p style="font-size:1.15rem;line-height:1.65;color:var(--text);max-width:720px;margin:0 auto 20px">AI is the biggest change of our lifetime. It should feel like <strong>superpowers</strong>, not homework.</p>
-<p style="font-size:1.05rem;line-height:1.65;color:var(--muted);max-width:720px;margin:0 auto 40px">That's what we do. We build the systems, translate the tech in whatever language works for you — total beginner or already fluent — and keep automating the tedious parts of your business so your time goes to what you're actually great at.</p>
-<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:760px;margin:0 auto;text-align:left" class="partner-grid">
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px"><div style="font-size:1.4rem;margin-bottom:8px">🎓</div><div style="font-weight:800;margin-bottom:4px">We meet you where you are</div><div style="font-size:.9rem;color:var(--muted);line-height:1.5">Total beginner? We explain it plainly. Already fluent? We skip the intro. Your call, always.</div></div>
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px"><div style="font-size:1.4rem;margin-bottom:8px">📞</div><div style="font-weight:800;margin-bottom:4px">Unlimited support calls</div><div style="font-size:.9rem;color:var(--muted);line-height:1.5">Tune, tweak, adjust as your business changes. Included in the flat monthly.</div></div>
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px"><div style="font-size:1.4rem;margin-bottom:8px">🔧</div><div style="font-weight:800;margin-bottom:4px">Grow as you grow</div><div style="font-size:.9rem;color:var(--muted);line-height:1.5">Automate one thing now. Something else in six months. Same partnership, same monthly.</div></div>
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:22px"><div style="font-size:1.4rem;margin-bottom:8px">🤝</div><div style="font-weight:800;margin-bottom:4px">One number if it breaks</div><div style="font-size:.9rem;color:var(--muted);line-height:1.5">That's Jeremy. Personal cell, personal accountability. Not a ticket queue.</div></div>
-<div style="grid-column:1/-1;background:linear-gradient(135deg,rgba(34,197,94,.12),rgba(22,163,74,.05));border:1px solid #22c55e;border-radius:14px;padding:22px;text-align:center"><div style="font-size:1.4rem;margin-bottom:8px">🛡️</div><div style="font-weight:800;margin-bottom:4px;color:#22c55e">30-day money-back guarantee</div><div style="font-size:.9rem;color:var(--text);line-height:1.5">If you're not seeing measurable results in the first 30 days, we refund the setup fee. No hoops, no fine print. Skin in the game.</div></div>
+<h2 style="font-size:clamp(1.5rem,3.2vw,2.1rem);font-weight:900;line-height:1.2;margin-bottom:12px">We don't hand you software<br>and disappear.</h2>
+<p style="color:var(--muted);font-size:1.02rem;line-height:1.65;max-width:660px;margin:0 auto 30px">AI is the biggest change of our lifetime. It should feel like superpowers, not homework. We build the systems, explain any piece of them in whatever language works for you — total beginner or already fluent — and keep automating the tedious parts as you grow.</p>
+<div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:left" class="mult-grid">
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-size:1.3rem;margin-bottom:6px">🎓</div><div style="font-weight:700;font-size:.95rem;margin-bottom:4px">Meet you where you are</div><div style="font-size:.85rem;color:var(--muted);line-height:1.5">No jargon unless you want it.</div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-size:1.3rem;margin-bottom:6px">📞</div><div style="font-weight:700;font-size:.95rem;margin-bottom:4px">Unlimited support calls</div><div style="font-size:.85rem;color:var(--muted);line-height:1.5">Included in the flat monthly.</div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-size:1.3rem;margin-bottom:6px">🔧</div><div style="font-weight:700;font-size:.95rem;margin-bottom:4px">Grow as you grow</div><div style="font-size:.85rem;color:var(--muted);line-height:1.5">Add systems anytime, same monthly.</div></div>
+<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-size:1.3rem;margin-bottom:6px">🤝</div><div style="font-weight:700;font-size:.95rem;margin-bottom:4px">One number if it breaks</div><div style="font-size:.85rem;color:var(--muted);line-height:1.5">Jeremy's cell. Not a ticket queue.</div></div>
 </div>
-<p style="margin-top:32px;font-size:1rem;color:var(--text);max-width:640px;margin-left:auto;margin-right:auto"><strong>The goal isn't more productivity.</strong> It's more freedom — for you and your team. AI just happens to be how we get there.</p>
+<p style="margin-top:26px;font-size:1.05rem;font-weight:600;color:var(--text)">The goal isn't more productivity. It's more freedom.</p>
 </div>
 </section>
 
 <style>@media(max-width:640px){.partner-grid{grid-template-columns:1fr !important}}</style>
 
-<!-- TIERS PREVIEW -->
-<section style="padding:90px 24px" id="tiers">
-<div style="max-width:var(--max);margin:0 auto">
-<div style="text-align:center;margin-bottom:44px">
-<div style="font-size:.75rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">Right-sized help</div>
-<h2 style="font-size:clamp(1.9rem,4vw,2.8rem);font-weight:900;line-height:1.15;margin-bottom:16px">How much help do you<br><span style="background:linear-gradient(135deg,var(--gold),var(--gold2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">actually need?</span></h2>
-<p style="font-size:1.05rem;color:var(--muted);max-width:660px;margin:0 auto">A solo operator and a 40-person company don't need the same thing. Three depths, same process, same people.</p>
-</div>
-<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch" class="tier-grid">
 
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:28px;display:flex;flex-direction:column">
-<div style="font-size:.7rem;font-weight:800;color:var(--muted);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">Build it yourself</div>
-<h3 style="font-size:1.25rem;font-weight:800;margin-bottom:6px">DIY Blueprint</h3>
-<p style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:16px">For solo operators and small teams with someone technical in-house. You get our exact playbook, templates, and prompts — plus a monthly call so you're never stuck.</p>
-<div style="font-size:1.5rem;font-weight:900;margin-bottom:2px">$497</div>
-<div style="font-size:.85rem;color:var(--muted);margin-bottom:16px">one-time · <strong style="color:var(--text)">$197/mo</strong> optional coaching</div>
-<div style="font-size:.86rem;color:var(--muted);line-height:1.9;margin-bottom:20px">✓ Full build playbook<br>✓ Prompt + workflow templates<br>✓ Tool setup guides<br>✓ Monthly group office hours<br>✓ 100% credited if you upgrade</div>
-<a href="/pricing/" style="margin-top:auto;font-size:.88rem;font-weight:700;color:var(--gold)">See what's included →</a>
-</div>
-
-<div style="background:linear-gradient(135deg,rgba(168,85,247,.14),rgba(192,132,252,.05));border:2px solid var(--gold);border-radius:16px;padding:28px;display:flex;flex-direction:column;position:relative">
-<div style="position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--gold);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:999px;white-space:nowrap">Most businesses start here</div>
-<div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">We build it for you</div>
-<h3 style="font-size:1.25rem;font-weight:800;margin-bottom:6px">Done-For-You</h3>
-<p style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:16px">For businesses doing real volume who want it live this week without touching anything. We build, connect, test, launch, and keep tuning it.</p>
-<div style="font-size:1.5rem;font-weight:900;margin-bottom:2px">$2,997 <span style="font-size:.85rem;font-weight:600;color:var(--muted);text-decoration:line-through">$4,997</span></div>
-<div style="font-size:.85rem;color:var(--muted);margin-bottom:16px">per system · <strong style="color:var(--text)">$597/mo flat</strong> for everything we build</div>
-<div style="font-size:.86rem;color:var(--muted);line-height:1.9;margin-bottom:20px">✓ Live in 5 business days<br>✓ Integrated with your tools<br>✓ Unlimited support calls<br>✓ Continuous tuning from real data<br>✓ 30-day money-back guarantee</div>
-<a href="/pricing/" style="margin-top:auto;font-size:.88rem;font-weight:700;color:var(--gold)">See what's included →</a>
-</div>
-
-<div style="background:var(--surface);border:1px solid #22c55e;border-radius:16px;padding:28px;display:flex;flex-direction:column">
-<div style="font-size:.7rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px">We run it with you</div>
-<h3 style="font-size:1.25rem;font-weight:800;margin-bottom:6px">Growth Partner</h3>
-<p style="font-size:.9rem;color:var(--muted);line-height:1.55;margin-bottom:16px">For multi-location and multi-team operations. We act as your AI department — quarterly roadmap, new systems as you grow, priority build queue.</p>
-<div style="font-size:1.5rem;font-weight:900;margin-bottom:2px">From $1,997<span style="font-size:.9rem;font-weight:600;color:var(--muted)">/mo</span></div>
-<div style="font-size:.85rem;color:var(--muted);margin-bottom:16px">setup waived · scoped to your size</div>
-<div style="font-size:.86rem;color:var(--muted);line-height:1.9;margin-bottom:20px">✓ Everything in Done-For-You<br>✓ New systems included quarterly<br>✓ Priority build queue<br>✓ Quarterly roadmap sessions<br>✓ Team training included</div>
-<a href="/pricing/" style="margin-top:auto;font-size:.88rem;font-weight:700;color:#22c55e">See what's included →</a>
-</div>
-
-</div>
-<p style="text-align:center;margin-top:28px;font-size:.92rem;color:var(--muted)">Not sure which one? That's what the consult is for. <a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener" style="color:var(--gold);font-weight:700">Book 30 minutes →</a></p>
-</div>
-</section>
 <style>@media(max-width:900px){.tier-grid{grid-template-columns:1fr !important;gap:26px}}</style>
 
-<!-- REFERRALS + PARTNERSHIPS -->
-<section style="padding:90px 24px;background:var(--surface)" id="partners">
-<div style="max-width:var(--max);margin:0 auto">
-<div style="text-align:center;margin-bottom:44px">
-<div style="font-size:.75rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px">Grow with us</div>
-<h2 style="font-size:clamp(1.8rem,3.8vw,2.6rem);font-weight:900;line-height:1.15;margin-bottom:16px">Send someone our way.<br><span style="color:#22c55e">We'll make it worth your while.</span></h2>
-<p style="font-size:1.02rem;color:var(--muted);max-width:660px;margin:0 auto">Most of our clients come from someone who already works with us. So we pay for that properly — and the business you send gets a real discount too.</p>
-</div>
 
-<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch" class="ref-grid">
-
-<div style="background:var(--bg);border:1px solid #22c55e;border-radius:16px;padding:30px">
-<div style="font-size:.7rem;font-weight:800;color:#22c55e;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Referral rewards</div>
-<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Every referral pays you. The more you send, the more each one is worth.</h3>
-<p style="font-size:.94rem;color:var(--muted);line-height:1.6;margin-bottom:20px">Credit it against your monthly or take it as cash — your call. The business you refer gets <strong style="color:var(--text)">$500 off their setup</strong> as your introduction.</p>
-<div style="display:flex;flex-direction:column;gap:10px">
-<div style="display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px"><div style="font-size:1.15rem;font-weight:900;color:#22c55e;min-width:38px">1</div><div style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--text)">$500</strong> — nearly a month of your retainer, covered</div></div>
-<div style="display:flex;align-items:center;gap:14px;background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:14px 16px"><div style="font-size:1.15rem;font-weight:900;color:#22c55e;min-width:38px">2</div><div style="font-size:.9rem;color:var(--muted)"><strong style="color:var(--text)">$750</strong> — the second one is worth more than the first</div></div>
-<div style="display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,rgba(34,197,94,.16),rgba(22,163,74,.05));border:1px solid #22c55e;border-radius:10px;padding:14px 16px"><div style="font-size:1.15rem;font-weight:900;color:#22c55e;min-width:38px">3+</div><div style="font-size:.9rem;color:var(--text)"><strong>$1,000 each, no cap.</strong> Three referrals covers your monthly for four months.</div></div>
-</div>
-<p style="font-size:.82rem;color:var(--muted);margin-top:16px;line-height:1.5">Paid once the business you referred is past their 30-day window — no clawbacks, no fine print. Tracked in your monthly check-in: no portal, no forms, no chasing.</p>
-</div>
-
-<div style="background:var(--bg);border:1px solid var(--gold);border-radius:16px;padding:30px">
-<div style="font-size:.7rem;font-weight:800;color:var(--gold);letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px">Partnerships</div>
-<h3 style="font-size:1.3rem;font-weight:800;margin-bottom:8px">Bring AI to your clients without building a delivery team.</h3>
-<p style="font-size:.94rem;color:var(--muted);line-height:1.6;margin-bottom:20px">If you already serve service businesses — agency, consultant, coach, bookkeeper, MSP, franchise group — your clients are asking you about AI right now. Come answer them with something real.</p>
-<div style="display:flex;flex-direction:column;gap:12px">
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-weight:800;font-size:.98rem;margin-bottom:4px">🤝 Affiliate</div><div style="font-size:.88rem;color:var(--muted);line-height:1.55">Send an intro, we do the rest. <strong style="color:var(--text)">20% of setup + 20% of monthly for 12 months.</strong> Nothing to learn, nothing to support.</div></div>
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-weight:800;font-size:.98rem;margin-bottom:4px">🏷️ White-label</div><div style="font-size:.88rem;color:var(--muted);line-height:1.55">We build under your brand at partner rates. You own the client and the margin. <strong style="color:var(--text)">Wholesale pricing from your third build on.</strong></div></div>
-<div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:18px"><div style="font-weight:800;font-size:.98rem;margin-bottom:4px">🏢 Franchise & association</div><div style="font-size:.88rem;color:var(--muted);line-height:1.55">One build, deployed across every location or member. Group pricing, shared onboarding, one rollout plan.</div></div>
-</div>
-<a href="https://cal.com/thatwasfast/30min?event=partnership" target="_blank" rel="noopener" style="display:inline-block;margin-top:20px;font-size:.9rem;font-weight:700;color:var(--gold)">Talk about a partnership →</a>
-</div>
-
-</div>
-</div>
-</section>
 <style>@media(max-width:800px){.ref-grid{grid-template-columns:1fr !important}}</style>
 
 <!-- PROOF WITHOUT LOGOS -->
@@ -928,38 +820,17 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">Do I need to know anything about AI?</summary>
 <p style="margin-top:12px;color:var(--muted);line-height:1.6">Zero. That's the whole point. We handle every technical piece — model selection, prompts, integrations, deployment, monitoring. You get a working system that ships in 5 business days. If you WANT to learn, Taza teaches AI to total beginners and experienced builders alike, and will walk you through any piece of it at your level.</p>
 </details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">How is this different from Smith.ai / Ruby / a hired receptionist?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Smith.ai and Ruby charge $300–$2,100/mo for a bundle of minutes and route you through their system. A human receptionist runs $4,000+/mo with PTO, turnover, and lunch breaks. We build you a custom AI on YOUR phone number — flat $597/mo, no per-minute overage anxiety, no shared infrastructure. You own the system, not us.</p>
-</details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What happens after month 1?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Your system runs on your accounts (OpenAI, Vapi, etc.), integrated with your tools. The $597/mo covers hosting, monitoring, unlimited support calls to tune and adapt, and continuous optimization based on real data. After month 3, you can cancel anytime — the system and everything we built for you stays with you.</p>
-</details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What if I want AI in more places than just these three?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Perfect — the three offers are just examples of what we can ship in a week. Anything you want automated (inbox triage, quote generation, dispatch, review requests, custom research), we can build. Each new system has a setup fee ($2,997 in September). The <strong>monthly stays flat at $597</strong> — it covers unlimited support, tuning, and adjustments across every system we've built together. Add one now, add three more next quarter, same monthly.</p>
-</details>
+
+
+
 <details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
 <summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">Will this replace my receptionist or my team?</summary>
 <p style="margin-top:12px;color:var(--muted);line-height:1.6">No. It replaces voicemail, hold music, and the follow-up nobody has time for. Your people stop doing the mindless part and spend their day on the parts that need a human — the conversations, the judgment calls, the relationships. That's the whole idea: <strong style="color:var(--text)">the AI takes care of the mindless so your team can be more mindful.</strong> Most of our clients don't cut staff; they stop needing the next hire just to keep up.</p>
 </details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What if I'd rather build it myself?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Then take the DIY Blueprint — $497 for the exact playbook, templates, prompts, and tool setup we use, plus optional monthly coaching at $197/mo so you're never stuck. If you get halfway and decide you'd rather we just do it, <strong style="color:var(--text)">the full $497 is credited toward your build.</strong> See <a href="/pricing/" style="color:var(--gold);font-weight:600">all three levels →</a></p>
-</details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">What if I'm not ready for a monthly system?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Run a <a href="/lead-revival/" style="color:var(--gold);font-weight:600">Lead Revival</a> campaign instead — <strong style="color:var(--text)">$1,997 one-time, no monthly, no contract.</strong> We text every old lead and past customer already sitting in your CRM, have the actual conversations, and book the ones who are ready. You get a full report of exactly what it produced, and the entire $1,997 credits toward a system build if you decide to go further within 60 days. It's the cheapest way to find out whether this works in your business before committing to anything.</p>
-</details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">Do you pay for referrals?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Yes — we'd rather pay you than run ads. <strong style="color:var(--text)">$500 for your first referral that goes live, $750 for the second, then $1,000 each after that, no cap.</strong> Credit it against your monthly or take the cash. It's paid once they're past their 30-day window, so there's nothing to claw back. And whoever you send gets $500 off their setup for coming from you.</p>
-</details>
-<details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
-<summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">I already serve small businesses. Can we partner?</summary>
-<p style="margin-top:12px;color:var(--muted);line-height:1.6">Three ways. <strong style="color:var(--text)">Affiliate:</strong> make the intro, we do everything, you take 20% of setup and 20% of the monthly for 12 months. <strong style="color:var(--text)">White-label:</strong> we build under your brand at wholesale rates, you own the client and the margin. <strong style="color:var(--text)">Franchise or association:</strong> one build deployed across every location or member at group pricing. <a href="https://cal.com/thatwasfast/30min?event=partnership" target="_blank" rel="noopener" style="color:var(--gold);font-weight:600">Book a partnership call →</a></p>
-</details>
+
+
+
+
 <details style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:20px 24px">
 <summary style="font-weight:700;font-size:1.05rem;cursor:pointer;color:var(--text)">How much of my time does this actually take?</summary>
 <p style="margin-top:12px;color:var(--muted);line-height:1.6">About 90 minutes total: a 30-minute consult, a 45-minute onboarding call, and a 15-minute review before it goes live. Everything else is on us — the building, the connecting, the testing, the tuning. That's deliberate. If changing were hard, nobody would do it.</p>
@@ -984,7 +855,7 @@ window.TWF_PROMO_END = new Date('2026-10-01T00:00:00-07:00');
 <footer>
 <p>&copy; <span id="twf-year">2026</span> That Was Fast &middot; <a href="tel:+14254378836">(425) 437-8836</a> &middot; <a href="mailto:murt@thatwasfast.ai">murt@thatwasfast.ai</a> &middot; <a href="https://cal.com/thatwasfast/30min" target="_blank" rel="noopener">Book a call</a></p>
 <p style="margin-top:10px;font-size:.8rem;color:var(--text)">AI systems for service businesses. Answer every call. Reply to every lead. Send proposals same-day.</p>
-<p style="margin-top:8px;font-size:.78rem"><a href="#how">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="#partners">Referrals &amp; Partners</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
+<p style="margin-top:8px;font-size:.78rem"><a href="#how">How it works</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/pricing/#referrals">Referrals &amp; Partners</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a></p>
 <script>document.getElementById('twf-year').textContent = new Date().getFullYear();</script>
 </footer>
 
